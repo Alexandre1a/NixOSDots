@@ -30,8 +30,10 @@
     };
 
     darwinConfigurations.macOS = nix-darwin.lib.darwinSystem {
+      specialArgs = {inherit inputs;};
       modules = [
         ./hosts/macos/configuration.nix
+        inputs.home-manager.darwinModules.default
       ];
     };
   };
