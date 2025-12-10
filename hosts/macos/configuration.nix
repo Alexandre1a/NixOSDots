@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # All imports go here
@@ -10,11 +10,33 @@
     ];
   
   # All System packages
-  environment.systemPackages = 
+  environment.systemPackages = with pkgs;
     [
-      pkgs.vim
+      # Basic text editing for all users
+      neovim
+      vim
+      # General tools
+      btop
+      eza
+      fastfetch
+      ffmpeg
+      fzf
+      git
+      git-lfs
+      gnupg
+      wget
+      tree
+      netcat
+      tmux
+      #telnet
+
     ];
-  
+  # Create the user 
+  users.users.alex = {
+    description = "Alexandre Delcamp--Enache";
+    home = "/Users/alex";
+    shell = pkgs.zsh;
+  };
   # HomeManager
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -30,6 +52,8 @@
     };
   };
   # Enable required settings
+  # TouchID login
+  security.pam.services.sudo_local.touchIdAuth = true;
   # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Target arch
