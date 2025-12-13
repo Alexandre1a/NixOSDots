@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, username, homeDir, ... }
+{ config, pkgs, inputs, username, homeDir, ... }:
 
 {
   home = {
