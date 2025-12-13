@@ -6,5 +6,6 @@
       ../../modules/nixos/locale.nix # For localisation options
       ../../modules/nixos/gamming/nvidia.nix # Nvidia (Drivers and Settings)
       ../../modules/nixos/gamming/steam.nix # For Steam/Proton/Lutris/MangoHUD/Heroic/Bottles
+      ../../modules/common/spotify.nix # Spotify/Spicetify
     ];
 }

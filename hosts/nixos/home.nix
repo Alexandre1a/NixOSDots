@@ -6,11 +6,10 @@
   home.username = "alex";
   home.homeDirectory = "/home/alex";
 
-  import = [
-    # Different imports
-    # Spotify
-    ../../common/spotify.nix
+  imports = [
+    ../../modules/home-manager/spicetify.nix
   ];
+
 
   # Hyprland
   wayland.windowManager.hyprland = {
