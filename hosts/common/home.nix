@@ -47,7 +47,6 @@
     clang-tools # The main compiler
     cmake
     vcpkg # The package manager
-    vcpkg-tool
 
     # Python
     python312 # The main interpreter
