@@ -8,6 +8,9 @@
     # Hyprland
     hyprland.url = "github:hyprwm/Hyprland";
 
+    # Spicetify
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
