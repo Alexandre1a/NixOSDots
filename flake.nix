@@ -21,7 +21,7 @@
     };
   };
 
-  outputs = { self,nix-darwin ,nixpkgs, ... }@inputs: {
+  outputs = { self,nix-darwin ,nixpkgs, home-manager, spicetify-nix, ... }@inputs: {
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
