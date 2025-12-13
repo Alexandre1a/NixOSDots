@@ -1,8 +1,6 @@
 {
   # The OpenSSH agent
-  service.ssh-agent = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
+  programs.ssh = {
+    startAgent = true;
   };
 }
