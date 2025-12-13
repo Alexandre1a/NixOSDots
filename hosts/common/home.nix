@@ -55,7 +55,15 @@
   ];
 
   # Git config
-
+  programs.git = {
+    enable = true;
+    settings = {
+      user = {
+        email = "mateialex@outlook.fr";
+	name = "Alexandre";
+      };
+    };
+  };
 
 
 }

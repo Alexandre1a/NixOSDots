@@ -1,14 +1,17 @@
 { config, pkgs, inputs, ... }:
 
-{
+let
+  commonHome = import ../common/home.nix {
+    inherit config pkgs inputs;
+    username = "alex";
+    homeDir = "/home/alex";
+  };
+in
+commonHome // {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "alex";
-  home.homeDirectory = "/home/alex";
-
   imports = [
-    inputs.spicetify-nix.homeManagerModules.spicetify
-    ../../modules/home-manager/spicetify.nix
+    ../../modules/home-manager/hyprland.nix
   ];
 
 
@@ -37,17 +40,6 @@
 	"$mod, R, exec, $launcher"
 	"$mod, F, exec, $browser"
       ];
-    };
-  };
-
-  # Git
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        email = "mateialex@outlook.fr";
-	name = "Alexandre";
-      };
     };
   };
 
