@@ -1,0 +1,59 @@
+{ config, pkgs, inputs, username, homeDir, ... }
+
+{
+  home = {
+    username = username;
+    homeDirectory = homeDir;
+    stateVersion = "25.11";
+  };
+
+  imports = [
+    inputs.spicetify-nix.homeManagerModules.spicetify
+    ../../modules/home-manager/spicetify.nix
+  ];
+
+  # Common Packages
+  home.packages = with pkgs; [
+    # CLI
+    btop
+    hello
+    fastfetch
+    yt-dlp
+    syncthing # ToDo: configure it ig
+    cmatrix
+    cava
+    # Dev CLI
+    doxygen
+    autoconf
+    pkg-config
+    swig
+    pandoc
+    gh
+
+    # GUI apps
+    vscode
+    bitwarden-desktop
+
+    # Go
+    go # The main compiler
+    hugo
+
+    # JavaScript
+    nodejs # The main interpreter
+    pnpm # To replace npm
+
+    # C/C++
+    clang-tools # The main compiler
+    cmake
+    vcpkg # The package manager
+    vcpkg-tool
+
+    # Python
+    python312 # The main interpreter
+    pip # The package manager
+
+    kitty
+
+  ];
+
+}
