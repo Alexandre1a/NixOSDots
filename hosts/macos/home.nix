@@ -7,10 +7,9 @@ let
     homeDir = "/Users/alex";
   };
 in
-commonHome
-{
+commonHome // {
   # Refer to the nixOS host for info about home-manager
-  inherit commonHome;
+  # inherit commonHome;
 
   home.stateVersion = "25.11";
   # Allow unfree packages
