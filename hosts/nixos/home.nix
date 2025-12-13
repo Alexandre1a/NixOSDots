@@ -7,7 +7,7 @@
   home.homeDirectory = "/home/alex";
 
   imports = [
-    inputs.spicetify-nix.homeManagerModules
+    inputs.spicetify-nix.homeManagerModules.spicetify
     ../../modules/home-manager/spicetify.nix
   ];
 
@@ -122,7 +122,4 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-
-  # Let Home Manager install and manage itself.
-  #programs.home-manager.enable = true;
 }
