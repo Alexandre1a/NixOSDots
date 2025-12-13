@@ -8,6 +8,9 @@
     # Hyprland
     hyprland.url = "github:hyprwm/Hyprland";
 
+    # Spicetify
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,7 +21,7 @@
     };
   };
 
-  outputs = { self,nix-darwin ,nixpkgs, ... }@inputs: {
+  outputs = { self,nix-darwin ,nixpkgs, home-manager, spicetify-nix, ... }@inputs: {
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {

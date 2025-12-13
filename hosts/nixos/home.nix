@@ -1,10 +1,16 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "alex";
   home.homeDirectory = "/home/alex";
+
+  imports = [
+    inputs.spicetify-nix.homeManagerModules.spicetify
+    ../../modules/home-manager/spicetify.nix
+  ];
+
 
   # Hyprland
   wayland.windowManager.hyprland = {
@@ -116,7 +122,4 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }

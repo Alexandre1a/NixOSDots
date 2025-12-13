@@ -9,7 +9,6 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules.nix
-      inputs.home-manager.nixosModules.default
     ];
 
   # Bootloader.
@@ -40,6 +39,8 @@
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
+    useGlobalPkgs = true;
+    useUserPackages = true;
     users = {
       "alex" = import ./home.nix;
     };

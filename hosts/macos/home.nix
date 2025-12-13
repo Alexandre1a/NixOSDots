@@ -5,6 +5,10 @@
   home.username = "alex";
   home.homeDirectory = "/Users/alex";
 
+  imports = [
+    inputs.spicetify-nix.homeMamangerModules.spicetify
+  ];
+
   home.stateVersion = "25.11";
 
   # Allow unfree packages
@@ -48,9 +52,4 @@
     # Customisation
     spicetify-cli
   ];
-
-  # 
-
-  programs.home-manager.enable = true;
-
 }
