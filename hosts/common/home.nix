@@ -51,7 +51,7 @@
 
     # Python
     python312 # The main interpreter
-    pip # The package manager
+    #pip # The package manager
   ];
 
   # Git config
