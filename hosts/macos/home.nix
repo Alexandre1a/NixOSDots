@@ -15,10 +15,10 @@ commonHome // {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  home.packages = with pkgs; [
+  home.packages = commonHome.home.packages ++ (with pkgs; [
     # Window management (maybe configure it with home-manager)
     yabai
     skhd
     #borders
-  ];
+  ]);
 }
