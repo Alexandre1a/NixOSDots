@@ -22,6 +22,7 @@
     syncthing # ToDo: configure it ig
     cmatrix
     cava
+    spicetify-cli
     # Dev CLI
     doxygen
     autoconf
@@ -33,6 +34,7 @@
     # GUI apps
     vscode
     bitwarden-desktop
+    kitty # Terminal emulator but needs a GUI
 
     # Go
     go # The main compiler
@@ -51,9 +53,10 @@
     # Python
     python312 # The main interpreter
     pip # The package manager
-
-    kitty
-
   ];
+
+  # Git config
+
+
 
 }
