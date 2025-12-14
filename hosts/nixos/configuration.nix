@@ -52,6 +52,15 @@
   # Hint Electron Apps to use Wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # Installs SDDM
+  services.displayManager = {
+    sddm = {
+      enable = true;
+      wayland.enable = true;
+    };
+    defaultSession = "hyprland";
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
