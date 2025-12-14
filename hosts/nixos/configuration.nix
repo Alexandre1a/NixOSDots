@@ -21,6 +21,28 @@
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  services = { 
+    xserver = {
+      enable = true;
+    };
+    displayManager = {
+      defaultSession = "hyprland";
+      sddm = {
+        enable = true;
+        wayland.enable = false;
+        #enableHidpi = true;
+        package = pkgs.kdePackages.sddm;
+        theme = "sddm-astronaut-theme";
+        #settings.Theme.CursorTheme = "Bibata-Modern-Classic";
+        extraPackages = with pkgs; [
+          kdePackages.qtmultimedia
+          kdePackages.qtsvg
+          kdePackages.qtvirtualkeyboard
+        ];
+      };
+    };
+  };
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -52,14 +74,6 @@
   # Hint Electron Apps to use Wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  # Installs SDDM
-  services.displayManager = {
-    sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
-    defaultSession = "hyprland";
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -73,6 +87,8 @@
 	tree
 	kitty
 	neovim
+	# Theme SDDM
+        sddm-astronaut
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -21,7 +21,7 @@
   # Keymap in X11
   services.xserver.xkb = {
     layout = "fr";
-    variant = "fr";
+    #variant = "fr";
   };
 
   # Keymap in the console
