@@ -78,6 +78,12 @@ in
 	"$mod, mouse_up, workspace, e-1"
       ];
 
+      # Mouse binds
+      bindm = [
+        "$mod, mouse:272, movewindow"
+	"$mod, mouse: 273, resizewindow"
+      ];
+
       bindl = [
         ", XF86AudioPause, exec, playerctl play-pause"
 	", XF86AudioPlay, exec, playerctl play-pause" 
