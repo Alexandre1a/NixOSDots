@@ -4,8 +4,8 @@ let
   in builtins.concatLists (map (ws:
     let keycode = ws + 9;
     in [
-      "SUPER, code:${toString keycode}, workspace, ${toString ws}"
-      "SUPER SHIFT, code:${toString keycode}, workspace, ${toString ws}"
+      "$mod, code:${toString keycode}, workspace, ${toString ws}"
+      "$mod SHIFT, code:${toString keycode}, movetoworkspace, ${toString ws}"
     ]
   ) wsList);
 in
@@ -32,6 +32,12 @@ in
 	accel_profile = "flat";
 	follow_mouse = "1";
       };
+
+      # Monitor config
+      monitor = [
+        "HDMI-A-1, 1920x1080@165, 1440x0, 1"
+	"DP-1, 1440x900@59.89, 0x0, 1"
+      ];
 
       # Keybinds
       bind = workspaceBinds ++ [
