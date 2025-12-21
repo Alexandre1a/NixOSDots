@@ -13,36 +13,6 @@ commonHome // {
   imports = [
     ../../modules/home-manager/hyprland.nix
   ];
-
-
-  # Hyprland
-  wayland.windowManager.hyprland = {
-    enable = true;
-
-    settings = {
-      # Variables
-      "$mod" = "SUPER";
-      "$term" = "alacritty";
-      "$launcher" = "wofi --show drun";
-      "$browser" = "firefox";
-
-      # Input
-      input = {
-        kb_layout = "fr";
-	kb_variant = "";
-      };
-
-      # Keybinds
-      bind = [
-        "$mod, Q, killactive"
-	"$mod, RETURN, exec, $term"
-	"$mod, M, exit"
-	"$mod, R, exec, $launcher"
-	"$mod, F, exec, $browser"
-      ];
-    };
-  };
-
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.

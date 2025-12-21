@@ -21,10 +21,12 @@
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Enables SDDM
   services = { 
     xserver = {
       enable = true;
     };
+
     displayManager = {
       defaultSession = "hyprland";
       sddm = {
@@ -63,6 +65,7 @@
     extraSpecialArgs = { inherit inputs; };
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "backup";
     users = {
       "alex" = import ./home.nix;
     };
