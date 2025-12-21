@@ -90,6 +90,7 @@
 	tree
 	kitty
 	neovim
+	playerctl
 	# Theme SDDM
         sddm-astronaut
   ];
