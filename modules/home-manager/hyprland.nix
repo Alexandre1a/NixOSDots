@@ -73,6 +73,9 @@ in
 	"$mod, up, movefocus, u"
 	"$mod, down, movefocus, d"
 
+	# Scroll through workspaces with mouse scroll
+	"$mod, mouse_down, workspace, e+1"
+	"$mod, mouse_up, workspace, e-1"
       ];
 
       bindl = [
