@@ -66,6 +66,7 @@ in
 	"$mod, R, exec, $launcher2"
 	"$mod, F, exec, $browser"
 	"$mod, E, exec, $fileManager"
+	"$mod, F, fullscreen"
 
 	# Focus binds
 	"$mod, left, movefocus, l"
