@@ -64,7 +64,7 @@ in
 	"$mod, RETURN, exec, $term"
 	"$mod, M, exit"
 	"$mod, R, exec, $launcher2"
-	"$mod, F, exec, $browser"
+	"$mod SHIFT, F, exec, $browser"
 	"$mod, E, exec, $fileManager"
 	"$mod, F, fullscreen"
 
