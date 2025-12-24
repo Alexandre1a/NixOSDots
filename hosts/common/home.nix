@@ -33,6 +33,7 @@
     # GUI apps
     vscode
     vesktop
+    obsidian
     bitwarden-desktop
     kitty # Terminal emulator but needs a GUI
 
