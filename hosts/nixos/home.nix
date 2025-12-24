@@ -32,7 +32,6 @@ commonHome // {
     wofi
     alacritty
     firefox
-    vesktop
     # Hypr* ecosystem
     hyprlauncher
 
