@@ -19,9 +19,6 @@ in
       loadModels = [ "codegemma:7b-instruct" "codegemma:7b-code" "codegemma:2b" "starcoder2:7b" ];
       package = gpu;
     };
-    open-webui = {
-      enable = true;
-    };
   };
 
 }
