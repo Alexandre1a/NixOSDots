@@ -1,3 +1,5 @@
+{ pkgs ,... }:
+
 {
   # This file is used to import all modules required by this setup.
   imports = 
@@ -8,6 +10,6 @@
       ../../modules/nixos/gamming/steam.nix # For Steam/Proton/Lutris/MangoHUD/Heroic/Bottles
       ../../modules/common/spotify.nix # Spotify/Spicetify
       ../../modules/common/ssh.nix
-      (import ../../modules/common/ai.nix { gpu = "cuda"; })
+      (import ../../modules/common/ai.nix { inherit pkgs; })
     ];
 }
