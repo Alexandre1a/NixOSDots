@@ -34,7 +34,7 @@ commonHome // {
     firefox
     # File manager
     kdePackages.dolphin
-
+    kdePackages.gwenview
     # Hypr* ecosystem
     hyprlauncher
 

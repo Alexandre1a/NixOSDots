@@ -31,6 +31,7 @@
     gh
 
     # GUI apps
+    zed-editor
     vscode
     vesktop
     obsidian
