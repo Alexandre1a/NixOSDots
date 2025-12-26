@@ -1,8 +1,8 @@
-{ pkgs ,... }:
+{ pkgs, ... }:
 
 {
 # Enpty file for future imports
   imports = [
-    (import ../../common/ai.nix { inherit pkgs; })
+    (import ../../modules/common/ai.nix { inherit pkgs; })
   ];
 }
