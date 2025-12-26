@@ -12,7 +12,6 @@ commonHome // {
   # manage.
   imports = [
     ../../modules/home-manager/hyprland.nix
-    (import ../../modules/common/ai.nix { gpu = "cuda"; })
   ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
