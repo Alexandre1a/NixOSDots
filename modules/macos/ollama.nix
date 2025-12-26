@@ -118,9 +118,10 @@ in
           # Le répertoire des modèles (on utilise toujours OLLAMA_MODELS)
           OLLAMA_MODELS = cfg.models;
         };
-        # Logs de sortie standard
-        StandardOutPath = "${cfg.home}/ollama.log";
-        StandardErrorPath = "${cfg.home}/ollama-error.log";
+        # Logs de sortie standard (laissé à null pour utiliser le système de logs macOS)
+        # Les logs seront visibles via: log show --predicate 'process == "ollama"' --info
+        StandardOutPath = null;
+        StandardErrorPath = null;
       };
     };
 
@@ -157,8 +158,8 @@ in
             '') cfg.loadModels}
           ''
         ];
-        StandardOutPath = "${cfg.home}/model-loader.log";
-        StandardErrorPath = "${cfg.home}/model-loader-error.log";
+        StandardOutPath = null;
+        StandardErrorPath = null;
       };
     };
 
@@ -175,3 +176,4 @@ in
 
   meta.maintainers = with lib.maintainers; [ ];
 }
+
