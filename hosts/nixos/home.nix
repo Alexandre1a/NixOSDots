@@ -32,6 +32,9 @@ commonHome // {
     wofi
     alacritty
     firefox
+    # File manager
+    kdePackages.dolphin
+
     # Hypr* ecosystem
     hyprlauncher
 
