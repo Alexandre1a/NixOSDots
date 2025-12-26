@@ -59,5 +59,8 @@
   # Target arch
   nixpkgs.hostPlatform = "aarch64-darwin";
   # Nix-Darwin State Version
-  system.stateVersion = 6;
+  system = {
+    stateVersion = 6;
+    primaryUser = "alex";
+  };
 }
