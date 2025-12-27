@@ -17,12 +17,12 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  
+
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enables SDDM
-  services = { 
+  services = {
     xserver = {
       enable = true;
     };
@@ -84,7 +84,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  	wget
+  wget
 	git
 	tree
 	kitty
@@ -100,7 +100,7 @@
 	cudatoolkit
 
 	# Theme SDDM
-        sddm-astronaut
+  sddm-astronaut
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

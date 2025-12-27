@@ -2,7 +2,7 @@
 
 {
   # This file is used to import all modules required by this setup.
-  imports = 
+  imports =
     [
       inputs.sops-nix.nixosModules.sops
       ../../modules/nixos/secrets.nix # Sops
