@@ -90,6 +90,14 @@
 	kitty
 	neovim
 	playerctl
+
+	# Nvidia packages
+	# Video accel
+	libva
+	libva-utils
+	# Cuda
+	cudatoolkit
+
 	# Theme SDDM
         sddm-astronaut
   ];
