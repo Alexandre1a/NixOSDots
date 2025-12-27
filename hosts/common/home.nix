@@ -14,6 +14,7 @@
   # Common Packages
   home.packages = with pkgs; [
     # CLI
+    sops
     btop
     hello
     fastfetch

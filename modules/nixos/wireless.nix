@@ -1,7 +1,15 @@
+{ config, ... }:
+
 {
+  sops.secrets."secrets/freebox-password" = {
+    owner = "root";
+    group = "root";
+    mode = "0400";
+  };
+
   networking.wireless.networks = {
     Freebox-357429 = {
-      psk = "nv9dmq2sxwqcfhzmqvn4xb";
+      pskRaw = "ext:${config.sops.secres."secrets/freebox-password".path}";
     };
   };
 }
