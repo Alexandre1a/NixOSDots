@@ -92,6 +92,7 @@
 	playerctl
 
 	# Nvidia packages
+	nvtopPackages.nvidia
 	# Video accel
 	libva
 	libva-utils

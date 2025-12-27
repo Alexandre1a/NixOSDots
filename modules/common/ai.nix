@@ -1,14 +1,18 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 
 let
-  # Détection simple du GPU pour choisir le package Ollama
+  
+  hasNvidiaGpu = config.hardware.nvidia.package or null != null;
+  
   gpu =
-    if builtins.hasAttr "nvidia" pkgs then
+    if hasNvidiaGpu then
       pkgs.ollama-cuda
     else if builtins.hasAttr "vulkan" pkgs then
       pkgs.ollama-vulkan
-    else if builtins.hasAttr "rocm" pkgs then
+    else if builtins.hasAttr "amd" pkgs then
       pkgs.ollama-rocm
+    else if pkgs.stdenv.isDarwin then
+      pkgs.ollama # Ollama uses Metal by default
     else
       pkgs.ollama; # CPU fallback
 in

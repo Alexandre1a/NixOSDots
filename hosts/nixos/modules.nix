@@ -12,6 +12,6 @@
       ../../modules/nixos/gamming/steam.nix # For Steam/Proton/Lutris/MangoHUD/Heroic/Bottles
       ../../modules/common/spotify.nix # Spotify/Spicetify
       ../../modules/common/ssh.nix
-      (import ../../modules/common/ai.nix { inherit pkgs; })
+      ../../modules/common/ai.nix
     ];
 }
