@@ -32,6 +32,7 @@ commonHome // {
     wofi
     alacritty
     firefox
+    cava
     # File manager
     kdePackages.dolphin
     kdePackages.gwenview

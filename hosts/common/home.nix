@@ -22,7 +22,6 @@
     yt-dlp
     syncthing # ToDo: configure it ig
     cmatrix
-    cava
     spicetify-cli
     # Dev CLI
     doxygen
@@ -33,7 +32,6 @@
     gh
 
     # GUI apps
-    zed-editor
     vscode
     vesktop
     obsidian
