@@ -20,7 +20,7 @@
     extraPackages = [ pkgs.nixd ];
 
     userSettings = {
-      theme = "Rosé Pine Moon";
+      theme = "Dracula";
     };
   };
 }
