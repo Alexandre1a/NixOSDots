@@ -24,7 +24,7 @@
       };
     };
     # Zed config
-    zed-ai = {
+    zed-custom = {
       enable = true;
     };
   };

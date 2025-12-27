@@ -345,7 +345,7 @@ let
 
 in
 {
-  options.programs.zed-ai = {
+  options.programs.zed-custom = {
     enable = lib.mkEnableOption "Zed AI configuration with Chain of Thought";
 
     enableCoTModels = lib.mkOption {
