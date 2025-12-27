@@ -1,9 +1,9 @@
 { pkgs, lib, config, ... }:
 
 let
-  
+
   hasNvidiaGpu = config.hardware.nvidia.package or null != null;
-  
+
   gpu =
     if hasNvidiaGpu then
       pkgs.ollama-cuda
@@ -20,7 +20,7 @@ in
   services = {
     ollama = {
       enable = true;
-      loadModels = [ "codegemma:7b-instruct" "codegemma:7b-code" "codegemma:2b" "starcoder2:7b" ];
+      loadModels = [ "codegemma:7b-instruct" "codegemma:7b-code" "codegemma:2b" "starcoder2:7b" "deepseek-r1:14b" "deepseek-r1:8b" ];
       package = gpu;
     };
   };

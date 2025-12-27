@@ -9,8 +9,26 @@
   imports = [
     inputs.spicetify-nix.homeManagerModules.spicetify
     ../../modules/home-manager/spicetify.nix
-    ../../modules/home-manager/zed.nix
+    ../../modules/common/zed.nix
   ];
+
+  programs = {
+    # Git config
+    git = {
+      enable = true;
+      settings = {
+        user = {
+          email = "mateialex@outlook.fr";
+          name = "Alexandre";
+        };
+      };
+    };
+    # Zed config
+    zed-ai = {
+      enable = true;
+    };
+  };
+
 
   # Common Packages
   home.packages = with pkgs; [
@@ -45,6 +63,7 @@
     # JavaScript
     nodejs # The main interpreter
     pnpm # To replace npm
+    nodejs_22
 
     # C/C++
     clang-tools # The main compiler
@@ -56,14 +75,5 @@
     #pip # The package manager
   ];
 
-  # Git config
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        email = "mateialex@outlook.fr";
-	name = "Alexandre";
-      };
-    };
-  };
+
 }
