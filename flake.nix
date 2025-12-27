@@ -4,7 +4,7 @@
   inputs = {
     # NixPKGS unstable
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    
+
     # Hyprland
     hyprland.url = "github:hyprwm/Hyprland";
 
@@ -35,7 +35,7 @@
       modules = [
         ./hosts/nixos/configuration.nix
         inputs.home-manager.nixosModules.default
-	
+
       ];
     };
 
