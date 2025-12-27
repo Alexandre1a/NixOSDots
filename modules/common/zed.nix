@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.zed-ai;
+  cfg = config.programs.zed-custom;
 
   # Zed configuration
   zedSettings = {
@@ -390,7 +390,7 @@ in
     };
 
     # Configure default MCP servers
-    programs.zed-ai.mcpServers = lib.mkDefault {
+    programs.zed-custom.mcpServers = lib.mkDefault {
       filesystem = {
         command = "npx";
         args = [
@@ -447,7 +447,7 @@ in
     # Helper Scripts
     home.packages = [
       # Main test script
-      (pkgs.writeShellScriptBin "zed-ai-test" ''
+      (pkgs.writeShellScriptBin "zed-custom-test" ''
         echo "🔍 Testing Zed AI Configuration with Chain of Thought..."
         echo ""
 

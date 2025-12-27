@@ -66,6 +66,9 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "backup";
+    sharedModules = [
+        inputs.sops-nix.homeManagerModules.sops
+      ];
     users = {
       "alex" = import ./home.nix;
     };

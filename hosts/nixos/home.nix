@@ -1,16 +1,10 @@
 { config, pkgs, inputs, ... }:
 
-let
-  commonHome = import ../common/home.nix {
-    inherit config pkgs inputs;
-    username = "alex";
-    homeDir = "/home/alex";
-  };
-in
-commonHome // {
+{
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   imports = [
+    ../common/home.nix
     ../../modules/home-manager/hyprland.nix
   ];
   # This value determines the Home Manager release that your configuration is
@@ -24,7 +18,7 @@ commonHome // {
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = commonHome.home.packages ++ ( with pkgs;[
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
 
@@ -51,7 +45,7 @@ commonHome // {
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-  ]);
+  ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.

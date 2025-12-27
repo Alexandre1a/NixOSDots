@@ -1,10 +1,6 @@
-{ config, pkgs, inputs, username, homeDir, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
-  home = {
-    username = username;
-    homeDirectory = homeDir;
-  };
 
   imports = [
     inputs.spicetify-nix.homeManagerModules.spicetify
@@ -74,6 +70,4 @@
     python312 # The main interpreter
     #pip # The package manager
   ];
-
-
 }
