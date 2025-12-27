@@ -11,6 +11,12 @@
     # Spicetify
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
+    # Sops-nix
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +27,7 @@
     };
   };
 
-  outputs = { self,nix-darwin ,nixpkgs, home-manager, spicetify-nix, ... }@inputs: {
+  outputs = { self, nix-darwin ,nixpkgs, ... }@inputs: {
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -29,6 +35,7 @@
       modules = [
         ./hosts/nixos/configuration.nix
         inputs.home-manager.nixosModules.default
+	
       ];
     };
 
