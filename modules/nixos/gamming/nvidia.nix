@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   hardware = { 
     #OpenGL
@@ -8,6 +10,8 @@
     #Nvidia Drivers
     nvidia = {     
       open = false; # My 1660S works better with closed source drivers 
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting = {
         enable = true;
       };
@@ -24,6 +28,7 @@
       "nvidia_uvm" 
       "nvidia_drm" 
     ];
+    kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
   };
 
   # Environment variables
@@ -46,5 +51,5 @@
   };
 
   # Nvidia Drivers
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 }

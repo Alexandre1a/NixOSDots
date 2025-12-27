@@ -31,7 +31,7 @@
       defaultSession = "hyprland";
       sddm = {
         enable = true;
-        wayland.enable = false;
+        wayland.enable = true;
         #enableHidpi = true;
         package = pkgs.kdePackages.sddm;
         theme = "sddm-astronaut-theme";
