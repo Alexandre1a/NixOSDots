@@ -21,6 +21,14 @@
         };
       };
     };
+    sops = {
+      enable = true;
+      defaultSopsFile = ../../secrets/secrets.yaml;
+      defaultSopsFormat = "yaml";
+      age = {
+        enable = true;
+        keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
+      };
     # Zed config
     zed-custom = {
       enable = true;
