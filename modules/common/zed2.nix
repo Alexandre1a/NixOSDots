@@ -104,11 +104,6 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    # Déclarer secrets SOPS dans HM
-    sops.secrets = lib.mkIf (cfg.githubToken != null || cfg.braveSearchApiKey != null) {
-      "zed/github_token" = lib.mkIf (cfg.githubToken != null) {};
-      "zed/brave_api_key" = lib.mkIf (cfg.braveSearchApiKey != null) {};
-    };
 
     # MCP servers dynamiques
     programs.zed-ai.mcpServers = lib.mkDefault (
@@ -121,7 +116,7 @@ in
         github = lib.optionalAttrs (cfg.githubToken != null) {
           command = "npx";
           args = ["-y" "@modelcontextprotocol/server-github"];
-          env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$(cat ${config.sops.secrets."zed/github_token".path})"; };
+          env = { GITHUB_PERSONAL_ACCESS_TOKEN = cfg.githubToken; };
         };
 
         git = { command = "npx"; args = ["-y" "@modelcontextprotocol/server-git"]; };
@@ -129,7 +124,7 @@ in
         brave-search = lib.optionalAttrs (cfg.braveSearchApiKey != null) {
           command = "npx";
           args = ["-y" "@modelcontextprotocol/server-brave-search"];
-          env = { BRAVE_API_KEY = "$(cat ${config.sops.secrets."zed/brave_api_key".path})"; };
+          env = { BRAVE_API_KEY = cfg.braveSearchApiKey; };
         };
       } {}
     );
@@ -139,7 +134,5 @@ in
       text = builtins.toJSON zedSettings;
     };
 
-    # SOPS AGE keyFile portable
-    programs.sops.age.keyFile = "${homeDir}/.config/sops/age/keys.txt";
   };
 }

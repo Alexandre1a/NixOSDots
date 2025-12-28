@@ -5,7 +5,7 @@
   imports = [
     inputs.spicetify-nix.homeManagerModules.spicetify
     ../../modules/home-manager/spicetify.nix
-    ../../modules/common/zed.nix
+    ../../modules/common/zed2.nix
   ];
 
 
@@ -21,7 +21,7 @@
       };
     };
     # Zed config
-    zed-custom = {
+    zed-ai = {
       enable = true;
     };
   };
