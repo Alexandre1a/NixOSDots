@@ -5,8 +5,10 @@
   imports = [
     inputs.spicetify-nix.homeManagerModules.spicetify
     ../../modules/home-manager/spicetify.nix
+    ../../modules/home-manager/secrets.nix
     ../../modules/common/zed.nix
   ];
+
 
   programs = {
     # Git config

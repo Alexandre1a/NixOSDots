@@ -5,7 +5,6 @@
   imports =
     [
       inputs.sops-nix.nixosModules.sops
-      inputs.sops-nix.homeManagerModules.sops
       ../../modules/nixos/secrets.nix # Sops
       ../../modules/nixos/wireless.nix # For the wifi
       ../../modules/nixos/locale.nix # For localisation options

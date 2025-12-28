@@ -377,15 +377,16 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    # Secrets management with Sops-nix
-    sops.secrets = lib.mkIf (cfg.githubToken != null || cfg.braveSearchApiKey != null) {
-      "zed/github_token" = lib.mkIf (cfg.githubToken != null) {
-        sopsFile = ../../secrets/secrets.yaml;
-        owner = config.home.username or "alex";
-      };
-      "zed/brave_api_key" = lib.mkIf (cfg.braveSearchApiKey != null) {
-        sopsFile = ../../secrets/secrets.yaml;
-        owner = config.home.username or "alex";
+
+    sops = lib.mkIf (cfg.githubToken != null || cfg.braveSearchApiKey != null) {
+      secrets = {
+        "zed/github_token" = lib.mkIf (cfg.githubToken != null) {
+          sopsFile = ../../secrets/secrets.yaml;
+        };
+
+        "zed/brave_api_key" = lib.mkIf (cfg.braveSearchApiKey != null) {
+          sopsFile = ../../secrets/secrets.yaml;
+        };
       };
     };
 
