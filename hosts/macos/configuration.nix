@@ -40,8 +40,8 @@
   # HomeManager
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
-    usesGlobalPkgs = true;
-    usesUserPackages = true;
+    useGlobalPkgs = true;
+    useUserPackages = true;
     backupFileExtension = "backup";
     sharedModules = [
       inputs.sops-nix.homeManagerModules.sops
