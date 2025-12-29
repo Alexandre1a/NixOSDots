@@ -2,7 +2,9 @@
 
 {
   # Refer to the nixOS host for info about home-manager
-  # inherit commonHome;
+  imports = [
+    ../common/home.nix
+  ];
 
   home.stateVersion = "25.11";
   # Allow unfree packages
