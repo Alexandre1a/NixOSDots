@@ -1,6 +1,6 @@
 { config, pkgs, inputs, ... }:
 
-commonHome // {
+{
   # Refer to the nixOS host for info about home-manager
   # inherit commonHome;
 
