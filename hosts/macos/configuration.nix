@@ -6,7 +6,7 @@
     [
       ./modules.nix
       # HomeManager
-      inputs.home-manager.darwinModules.default
+      #inputs.home-manager.darwinModules.default
     ];
   
   # All System packages
@@ -43,7 +43,7 @@
     usesGlobalPkgs = true;
     usesUserPackages = true;
     backupFileExtension = "backup";
-    home-manager.sharedModules = [
+    sharedModules = [
       inputs.sops-nix.homeManagerModules.sops
     ];
     users = {
