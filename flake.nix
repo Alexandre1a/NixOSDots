@@ -35,7 +35,7 @@
       modules = [
         ./hosts/nixos/configuration.nix
         inputs.home-manager.nixosModules.default
-        sops-nix.nixosModules.sops
+        inputs.sops-nix.nixosModules.sops
 
       ];
     };
@@ -45,7 +45,7 @@
       modules = [
         ./hosts/macos/configuration.nix
         inputs.home-manager.darwinModules.default
-        sops-nix.darwinModules.sops
+        inputs.sops-nix.darwinModules.sops
       ];
     };
   };
