@@ -68,7 +68,7 @@
     backupFileExtension = "backup";
     sharedModules = [
         inputs.sops-nix.homeManagerModules.sops
-      ];
+    ];
     users = {
       "alex" = import ./home.nix;
     };

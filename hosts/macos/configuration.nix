@@ -40,6 +40,12 @@
   # HomeManager
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
+    usesGlobalPkgs = true;
+    usesUserPackages = true;
+    backupFileExtension = "backup";
+    home-manager.sharedModules = [
+      inputs.sops-nix.homeManagerModules.sops
+    ];
     users = {
       "alex" = import ./home.nix;
     };
