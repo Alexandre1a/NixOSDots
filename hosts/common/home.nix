@@ -5,7 +5,7 @@
   imports = [
     inputs.spicetify-nix.homeManagerModules.spicetify
     ../../modules/home-manager/spicetify.nix
-    ../../modules/common/zed2.nix
+    ../../modules/home-manager/zed.nix
   ];
 
 

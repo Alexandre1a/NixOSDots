@@ -5,22 +5,34 @@
     enable = true;
     extensions = [
       "nix"
-      "rosé pine"
       "rust"
+
+      "rosé pine"
+      
       "typescript"
-      "python"
       "javascript"
       "html"
       "css"
-      "markdown"
+
+      "go"
+      "python"
+
       "json"
       "yaml"
-      "go"
+      "toml"
+
+      "markdown"      
     ];
     extraPackages = [ pkgs.nixd ];
 
     userSettings = {
       theme = "Dracula";
+      language_models = {
+        ollama = {
+          api_url = http://localhost:11434";
+          auto_discover = true;
+        };
+      };
     };
   };
 }
