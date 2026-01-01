@@ -4,7 +4,7 @@
     programs.zsh = {
         enable = true;
         package = pkgs.zsh;
-        enableCompletions = true;
+        enableCompletion = true;
         autocd = true;
         loginExtra = "echo Hello World!";
 

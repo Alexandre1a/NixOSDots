@@ -10,27 +10,29 @@
     ];
   
   # All System packages
-  environment.systemPackages = with pkgs;
-    [
-      # Basic text editing for all users
-      neovim
-      vim
-      # General tools
-      btop
-      eza
-      fastfetch
-      ffmpeg
-      fzf
-      git
-      git-lfs
-      gnupg
-      wget
-      tree
-      netcat
-      tmux
-      #telnet
-
-    ];
+  environment = { 
+    systemPackages = with pkgs;
+      [
+        # Basic text editing for all users
+        neovim
+        vim
+        # General tools
+        btop
+        eza
+        fastfetch
+        ffmpeg
+        fzf
+        git
+        git-lfs
+        gnupg
+        wget
+        tree
+        netcat
+        tmux
+        #telnet
+      ];
+    pathsToLink = [ "/share/zsh" ];
+  };
   # Create the user 
   users.users.alex = {
     description = "Alexandre Delcamp--Enache";

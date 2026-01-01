@@ -79,8 +79,10 @@
   programs.hyprland.enable = true;
 
   # Hint Electron Apps to use Wayland
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
+  environment = {
+    sessionVariables.NIXOS_OZONE_WL = "1";
+    pathsToLink = [ "/share/zsh" ];
+  };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
