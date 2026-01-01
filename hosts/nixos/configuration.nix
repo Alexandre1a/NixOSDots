@@ -56,6 +56,7 @@
   users.users.alex = {
     isNormalUser = true;
     description = "Alexandre Delcamp--Enache";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     ];

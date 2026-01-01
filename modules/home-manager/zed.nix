@@ -26,11 +26,16 @@
     extraPackages = [ pkgs.nixd ];
 
     userSettings = {
-      theme = "Dracula";
+      theme = {
+        mode = "system";
+        "dark" = "Rosé Pine Moon";
+        light = "Rosé Pine Dawn";
+      };
+      hour_format = "hour24";
       language_models = {
         ollama = {
-          api_url = http://localhost:11434";
-          auto_discover = true;
+          api_url = "http://localhost:11434";
+
         };
       };
     };
