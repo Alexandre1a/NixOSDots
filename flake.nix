@@ -36,7 +36,15 @@
         ./hosts/nixos/configuration.nix
         inputs.home-manager.nixosModules.default
         inputs.sops-nix.nixosModules.sops
+      ];
+    };
 
+    nixosConfigurations.light = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/light/configuration.nix
+        inputs.home-manager.nixosModules.default
+        inputs.sops-nix.nixosModules.sops
       ];
     };
 
