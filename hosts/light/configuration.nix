@@ -20,7 +20,7 @@
 
   # Networking
   networking = {
-    hostname = "light";
+    hostName = "light";
     networkmanager = {
       enable = true;
     };
@@ -31,8 +31,8 @@
     # Desktop Environment/Greeter
     xserver = {
       enable = true;
+      defaultSession =  "xfce";
       displayManager = {
-        defaultSession = "xfce";
         lightdm = {
           enable = true;
         };
