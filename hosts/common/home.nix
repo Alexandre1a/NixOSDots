@@ -69,8 +69,8 @@
       #pip # The package manager
     ];
     shellAliases = {
-      drs = "darwin-rebuild switch --flake ~/Developer/nix/NixOSDots#macOS";
-      nrb = "nixos-rebuild switch --flake ~/Developer/NixOSDots#nixos";
+      drs = "sudo darwin-rebuild switch --flake ~/Developer/nix/NixOSDots#macOS";
+      nrs = "sudo nixos-rebuild switch --flake ~/Developer/NixOSDots#nixos";
     };
   };
 }
