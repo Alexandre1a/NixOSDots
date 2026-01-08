@@ -6,15 +6,12 @@
         package = pkgs.zsh;
         enableCompletion = true;
         autocd = true;
-        loginExtra = "echo Hello World!";
+        loginExtra = "fastfetch --logo mac2_small -s DateTime:Battery:CPU:GPU:Memory:Host:Media";
 
         autosuggestion = {
             enable = true;
-            strategy = "match_prev_cmd";
-        };
-
-        dirHashes = {
-            code = "$\{config.home.homeDirectory}/Developer";
+            strategy =  [ "match_prev_cmd" ];
+            highlight = "fg=grey, underline";
         };
 
         history = {
@@ -40,8 +37,8 @@
                 "fzf"
                 "gh"
                 "kitty"
-                "zsh-autosuggestions"
-                "zsh-syntax-highlighting"
+                #"zsh-autosuggestions"
+                #"zsh-syntax-highlighting"
             ];
         };
     };
