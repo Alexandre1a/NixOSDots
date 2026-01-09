@@ -6,7 +6,7 @@
         package = pkgs.zsh;
         enableCompletion = true;
         autocd = true;
-        loginExtra = "fastfetch --logo small -s DateTime:Battery:CPU:GPU:Memory:Host:Media";
+        initExtra = "fastfetch --logo small -s DateTime:Battery:CPU:GPU:Memory:Host:Media";
 
         autosuggestion = {
             enable = true;
