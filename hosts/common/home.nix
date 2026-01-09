@@ -57,7 +57,7 @@
       hugo
 
       # JavaScript
-      nodejs # The main interpreter
+      nodejs_24 # The main interpreter
       pnpm # To replace npm
       nodejs_22
 
