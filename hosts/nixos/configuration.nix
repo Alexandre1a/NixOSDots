@@ -29,7 +29,7 @@
 
       # Prevent hanging builds
       max-silent-time = 3600;
-      tiemout = 1800;
+      timeout = 1800;
     };
   };
 
