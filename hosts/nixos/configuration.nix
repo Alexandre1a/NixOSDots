@@ -76,8 +76,15 @@
   };
 
   # Hyrpland Install
-  programs.hyprland.enable = true;
-
+  programs = {
+    hyprland = {
+      enable = true;
+    };
+    zsh = { 
+      enable = true;
+      enableAutosuggestions = true;
+    };
+  };
   # Hint Electron Apps to use Wayland
   environment = {
     sessionVariables.NIXOS_OZONE_WL = "1";
@@ -90,7 +97,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  wget
+	wget
 	git
 	tree
 	kitty
@@ -106,7 +113,7 @@
 	cudatoolkit
 
 	# Theme SDDM
-  sddm-astronaut
+  	sddm-astronaut
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -42,6 +42,8 @@
       swig
       pandoc
       gh
+      fzf
+      eza
 
       # GUI apps
       vscode

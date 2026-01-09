@@ -13,5 +13,6 @@
       ../../modules/common/spotify.nix # Spotify/Spicetify
       ../../modules/common/ssh.nix
       ../../modules/common/ai.nix
+      #../../modules/home-manager/shell.nix
     ];
 }
