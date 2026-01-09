@@ -75,7 +75,7 @@ let
 
     ui_font_size = 16;
     buffer_font_size = 16;
-    theme = "Dracula";
+    theme = "Rosé Pine";
     icon_theme = "Material Icon Theme";
   };
 
