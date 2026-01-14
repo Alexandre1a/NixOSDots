@@ -1,45 +1,47 @@
 { pkgs, ... }:
 
 {
-    programs.zsh = {
-        enable = true;
-        package = pkgs.zsh;
-        enableCompletion = true;
-        autocd = true;
-        initContent = "fastfetch --logo small -s DateTime:Battery:CPU:GPU:Memory:Host:Media";
-
-        autosuggestion = {
+    programs = {
+        zsh = {
             enable = true;
-            strategy =  [ "match_prev_cmd" ];
-            highlight = "fg=grey, underline";
-        };
+            package = pkgs.zsh;
+            enableCompletion = true;
+            autocd = true;
+            initContent = "fastfetch --logo small -s DateTime:Battery:CPU:GPU:Memory:Host:Media";
 
-        history = {
-            append = true;
-            extended = true;
-            ignoreSpace = false;
-            save = 100000;
-            size = 100000;
-            saveNoDups = true;
-            share = true;
-        };
-        
-        oh-my-zsh = {
-            enable = true;
-            package = pkgs.oh-my-zsh;
-            plugins = [
-                "git"
-                "react-native"
-                "golang"
-                "docker"
-                #"brew"
-                "eza"
-                "fzf"
-                "gh"
-                "kitty"
-                #"zsh-autosuggestions"
-                #"zsh-syntax-highlighting"
-            ];
+            autosuggestion = {
+                enable = true;
+                strategy =  [ "match_prev_cmd" ];
+                highlight = "fg=grey, underline";
+            };
+
+            history = {
+                append = true;
+                extended = true;
+                ignoreSpace = false;
+                save = 100000;
+                size = 100000;
+                saveNoDups = true;
+                share = true;
+            };
+            
+            oh-my-zsh = {
+                enable = true;
+                package = pkgs.oh-my-zsh;
+                plugins = [
+                    "git"
+                    "react-native"
+                    "golang"
+                    "docker"
+                    #"brew"
+                    "eza"
+                    "fzf"
+                    "gh"
+                    "kitty"
+                    #"zsh-autosuggestions"
+                    #"zsh-syntax-highlighting"
+                ];
+            };
         };
     };
 }

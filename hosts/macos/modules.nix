@@ -3,7 +3,7 @@
 {
 # Enpty file for future imports
   imports = [
-    ../common/modules.nix
+    ../../modules/common/nix.nix
     ../../modules/macos/ollama.nix
     ../../modules/common/ai.nix
   ];

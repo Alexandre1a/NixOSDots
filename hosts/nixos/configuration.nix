@@ -11,11 +11,12 @@
       ./modules.nix
     ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "nixos"; # Define your hostname.
+  networking = {
+    hostName = "nixos"; # Define your hostname.
+    networkmanager = {
+      enable = true; # Enables wireless connectivity
+    };
+  };
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
 
@@ -47,17 +48,19 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.alex = {
-    isNormalUser = true;
-    description = "Alexandre Delcamp--Enache";
-    shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    ];
+  users = {
+    users = {
+      alex = {
+        isNormalUser = true;
+        description = "Alexandre Delcamp--Enache";
+        shell = pkgs.zsh;
+        extraGroups = [ "networkmanager" "wheel" ];
+        packages = with pkgs; [
+        ];
+      };
+    };
   };
 
   home-manager = {
@@ -83,36 +86,28 @@
       enableAutosuggestions = true;
     };
   };
-  # Hint Electron Apps to use Wayland
-  environment = {
-    sessionVariables.NIXOS_OZONE_WL = "1";
-    pathsToLink = [ "/share/zsh" ];
-  };
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-	wget
-	git
-	tree
-	kitty
-	neovim
-	playerctl
+  environment = {
+    systemPackages = with pkgs; [
+	    playerctl
 
-	# Nvidia packages
-	nvtopPackages.nvidia
-	# Video accel
-	libva
-	libva-utils
-	# Cuda
-	cudatoolkit
+	    # Nvidia packages
+	    nvtopPackages.nvidia
+	    # Video accel
+	    libva
+	    libva-utils
+	    # Cuda
+	    cudatoolkit
 
-	# Theme SDDM
-  	sddm-astronaut
-  ];
+	    # Theme SDDM
+  	  sddm-astronaut
+    ];
+    # Hint Electron Apps to use Wayland
+    sessionVariables.NIXOS_OZONE_WL = "1";
+    pathsToLink = [ "/share/zsh" ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

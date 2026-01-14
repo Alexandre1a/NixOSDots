@@ -13,31 +13,20 @@
   environment = { 
     systemPackages = with pkgs;
       [
-        # Basic text editing for all users
-        neovim
-        vim
-        # General tools
-        btop
-        eza
-        fastfetch
-        ffmpeg
-        fzf
-        git
         git-lfs
-        gnupg
-        wget
-        tree
-        netcat
-        tmux
         #telnet
       ];
     pathsToLink = [ "/share/zsh" ];
   };
   # Create the user 
-  users.users.alex = {
-    description = "Alexandre Delcamp--Enache";
-    home = "/Users/alex";
-    shell = pkgs.zsh;
+  users = {
+    users = {
+      alex = {
+        description = "Alexandre Delcamp--Enache";
+        home = "/Users/alex";
+        shell = pkgs.zsh;
+      };
+    };
   };
   # HomeManager
   home-manager = {
@@ -61,14 +50,18 @@
   };
   # Enable required settings
   # TouchID login
-  security.pam.services.sudo_local.touchIdAuth = true;
-
+  security = {
+    pam = {
+      services = {
+        sudo_local = {
+          touchIdAuth = true;
+        };
+      };
+    };
+  };
   # Target arch
   nixpkgs = {
     hostPlatform = "aarch64-darwin";
-    config = {
-      allowUnfree = true;
-    };
   };
   # Nix-Darwin State Version
   system = {

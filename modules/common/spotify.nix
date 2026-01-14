@@ -2,13 +2,19 @@
 
 {
   # Installs Spotify and Spicetify (import this module in configuration.nix)
-  environment.systemPackages = with pkgs; [
-    spotify
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      spotify
+    ];
+  };
 
-  # Local discovery
-  networking.firewall.allowedTCPPorts = [ 57621 ];
-
-  # Spotify Connect
-  networking.firewall.allowedUDPPorts = [ 5353 ];
+ 
+  networking = {
+    firewall = {
+      # Local discovery
+      allowedTCPPorts = [ 57621 ];
+      # Spotify Connect
+      allowedUDPPorts = [ 5353 ];
+    };
+  };
 }

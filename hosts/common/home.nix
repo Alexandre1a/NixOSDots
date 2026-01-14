@@ -28,12 +28,9 @@
   home = {
     packages = with pkgs; [
       # CLI
-      btop
       hello
-      fastfetch
       yt-dlp
       syncthing # ToDo: configure it ig
-      cmatrix
       spicetify-cli
       # Dev CLI
       doxygen
@@ -41,9 +38,6 @@
       pkg-config
       swig
       pandoc
-      gh
-      fzf
-      eza
 
       # GUI apps
       vscode
@@ -70,6 +64,7 @@
       python312 # The main interpreter
       #pip # The package manager
     ];
+
     shellAliases = {
       drs = "sudo darwin-rebuild switch --flake ~/Developer/nix/NixOSDots#macOS";
       nrs = "sudo nixos-rebuild switch --flake ~/Developer/nix/NixOSDots#nixos";

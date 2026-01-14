@@ -6,14 +6,14 @@
     ../common/home.nix
   ];
 
-  home.stateVersion = "25.11";
-  # Allow unfree packages
-  #nixpkgs.config.allowUnfree = true;
-
-  home.packages = with pkgs; [
-    # Window management (maybe configure it with home-manager)
-    yabai
-    skhd
-    #borders
-  ];
+  
+  home = {
+    packages = with pkgs; [
+      # Window management (maybe configure it with home-manager)
+      yabai
+      skhd
+      #borders
+    ];
+    stateVersion = "25.11";
+  };
 }

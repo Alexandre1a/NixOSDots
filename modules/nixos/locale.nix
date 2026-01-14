@@ -19,12 +19,17 @@
   };
 
   # Keymap in X11
-  services.xserver.xkb = {
-    layout = "fr";
-    #variant = "fr";
+  services = {
+    xserver = {
+      xkb = {
+        layout = "fr";
+        #variant = "fr";
+      };
+    };
   };
 
   # Keymap in the console
-  console.keyMap = "fr";
-
+  console = {
+    keyMap = "fr";
+  };
 }
