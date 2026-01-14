@@ -13,7 +13,7 @@
 
         # Package caches
         substituters = [
-            "https://cache.nixos.org";
+            "https://cache.nixos.org"
             "https://nix-community.cachix.org"
             "https://hyprland.cachix.org"
         ];
