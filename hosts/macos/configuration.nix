@@ -4,7 +4,7 @@
   # All imports go here
   imports =
     [
-      ./modules.nix
+      ./modules.nix 
       # HomeManager
       #inputs.home-manager.darwinModules.default
     ];
@@ -62,7 +62,7 @@
   # Enable required settings
   # TouchID login
   security.pam.services.sudo_local.touchIdAuth = true;
-  
+
   # Target arch
   nixpkgs = {
     hostPlatform = "aarch64-darwin";

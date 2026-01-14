@@ -2,7 +2,7 @@
 {
     nix = {
       settings = {
-        experimental-features = [ "nix-command" "flakes" ];
+        experimental-features = [ "nix-command" "flakes" ];
 
         # Limit resource usage to prevent Linux OOM
         max-jobs = 2;
