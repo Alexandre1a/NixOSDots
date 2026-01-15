@@ -1,6 +1,11 @@
 { config, ... }:
 {
     nix = {
+      gc = {
+        automatic = true;
+        options = "--delete-older-than 2d";
+      };
+
       settings = {
         experimental-features = [ "nix-command" "flakes" ];
 
