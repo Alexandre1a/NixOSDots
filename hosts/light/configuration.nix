@@ -14,7 +14,7 @@
       light = { # Here
         isNormalUser = true;
         # You can change the description too !
-        description = "A lightweight system for lowend or performance machines"
+        description = "A lightweight system for lowend or performance machines";
         shell = pkgs.zsh;
         extraGroups = [ "networkmanager" "wheel" ];
       };
@@ -28,7 +28,7 @@
     backupFileExtension = "HM-backup";
     users = {
       # Change this to your username
-      "light" = import ./home.nix";
+      "light" = import ./home.nix;
     };
   };
 
