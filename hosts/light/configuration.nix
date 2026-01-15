@@ -22,7 +22,7 @@
 
   # Home-Manager config
   home-manager = {
-    extraSpecialArgs = { inherit inputs };
+    extraSpecialArgs = { inherit inputs; };
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "HM-backup";
