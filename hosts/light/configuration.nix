@@ -10,8 +10,7 @@
 
   # Users
   # Don't forget to add a password or change the username
-  users = [
-    users = {
+  users.users = {
       light = { # Here
         isNormalUser = true;
         # You can change the description too !
@@ -20,7 +19,6 @@
         extraGroups = [ "networkmanager" "wheel" ];
       };
     };
-  ];
 
   # Home-Manager config
   home-manager = {
