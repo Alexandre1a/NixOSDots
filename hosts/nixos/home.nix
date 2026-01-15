@@ -27,10 +27,8 @@
       firefox
       cava
       # File manager
-      kdePackages = [
-        dolphin
-        gwenview
-      ]
+      kdePackages.dolphin
+      kdePackages.gwenview
       # Hypr* ecosystem
       hyprlauncher
 
