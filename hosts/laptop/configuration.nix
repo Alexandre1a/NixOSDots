@@ -22,6 +22,16 @@
     };
   };
 
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    useGlobalPkgs = true;
+    useUsersPackages = true;
+    backupFileExtension = "HM-Backup";
+    users = {
+      "laptop" = imports ./home.nix;
+    };
+  };
+
   programs = { 
     hyprland = {
       enable = true;
