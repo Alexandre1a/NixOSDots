@@ -1,10 +1,9 @@
 { config, inputs, pkgs, ... }:
 
 {
-  imports = 
-    [
-      ./modules.nix
-    ];
+  imports = [
+    ./modules.nix
+  ];
 
   networking = {
     hostName = "laptop";
