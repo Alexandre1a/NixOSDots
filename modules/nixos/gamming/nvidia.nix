@@ -22,7 +22,7 @@
     kernelParams = [
       "nvidia-drm.modset=1" # DRM modesetting
     ];
-    initrd = {
+    initrd = {
       kernelModules = [ 
         "nvidia" 
         "nvidia_modeset" 

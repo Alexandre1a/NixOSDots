@@ -1,8 +1,8 @@
 { config, ... }:
 
 {
-  sops = {
-    secrets = {
+  sops = {
+    secrets = {
       "wireless/freebox-password" = {
         owner = "root";
         group = "root";

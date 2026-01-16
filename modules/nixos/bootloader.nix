@@ -1,7 +1,7 @@
 {
     boot = {
       loader = {
-        systemd-boot = {
+        systemd-boot = {
             enable = true;
         };
         efi = {

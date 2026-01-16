@@ -19,7 +19,7 @@
   };
 
   # Keymap in X11
-  services = {
+  services = {
     xserver = {
       xkb = {
         layout = "fr";
