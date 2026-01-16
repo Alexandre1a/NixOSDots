@@ -30,7 +30,7 @@
     useUsersPackages = true;
     backupFileExtension = "HM-Backup";
     users = {
-      "laptop" = imports ./home.nix;
+      "laptop" = import ./home.nix;
     };
   };
 
