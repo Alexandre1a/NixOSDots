@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 {
   imports = [
-    ./modules.nix
-  ];
+      ./modules.nix
+    ];
 
   networking = {
     hostName = "laptop";
