@@ -26,7 +26,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     useGlobalPkgs = true;
-    useUsersPackages = true;
+    useUserPackages = true;
     backupFileExtension = "HM-Backup";
     users = {
       "laptop" = import ./home.nix;
@@ -42,7 +42,7 @@
     };
   };
 
-  enviroment = {
+  environment = {
     systemPackages = with pkgs; [
       playerctl
       nvtopPackages.nvidia
@@ -50,12 +50,12 @@
       libva-utils
       cudatoolkit
 
-      sddm-astraunot
+      sddm-astronaut
     ];
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
     };
-    pathToLink = [ "/share/zsh" ];
+    pathsToLink = [ "/share/zsh" ];
   };
 
   system = {
