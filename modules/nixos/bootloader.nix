@@ -3,6 +3,7 @@
       loader = {
       	grub = {
 	  enable = false;
+	  device = "nodev";
 	};
         systemd-boot = {
             enable = true;
