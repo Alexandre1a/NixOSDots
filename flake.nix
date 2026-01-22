@@ -16,6 +16,11 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    # Star citizen
+    nix-gaming = {
+     url = "github:fufexan/nix-gaming";
+    };
 
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";

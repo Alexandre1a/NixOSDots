@@ -91,18 +91,17 @@
   # $ nix search wget
   environment = {
     systemPackages = with pkgs; [
-	    playerctl
-
-	    # Nvidia packages
-	    nvtopPackages.nvidia
-	    # Video accel
-	    libva
-	    libva-utils
-	    # Cuda
-	    cudatoolkit
-
-	    # Theme SDDM
-  	  sddm-astronaut
+      inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.star-citizen
+      playerctl
+      # Nvidia packages
+      nvtopPackages.nvidia
+      # Video accel
+      libva
+      libva-utils
+      # Cuda
+      cudatoolkit
+      # Theme SDDM
+      sddm-astronaut
     ];
     # Hint Electron Apps to use Wayland
     sessionVariables.NIXOS_OZONE_WL = "1";
