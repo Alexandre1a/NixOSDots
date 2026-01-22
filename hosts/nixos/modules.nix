@@ -5,6 +5,7 @@
   imports =
     [
       inputs.sops-nix.nixosModules.sops
+      ../common/modules.nix
       ../../modules/nixos/secrets.nix # Sops
 #     ../../modules/nixos/wireless.nix # For the wifi
       ../../modules/nixos/gamming/nvidia.nix # Nvidia (Drivers and Settings)
