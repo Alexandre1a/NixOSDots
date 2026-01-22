@@ -91,7 +91,6 @@
   # $ nix search wget
   environment = {
     systemPackages = with pkgs; [
-      inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.star-citizen
       playerctl
       # Nvidia packages
       nvtopPackages.nvidia

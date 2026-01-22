@@ -8,8 +8,9 @@
       ../common/modules.nix
       ../../modules/nixos/secrets.nix # Sops
 #     ../../modules/nixos/wireless.nix # For the wifi
-      ../../modules/nixos/gamming/nvidia.nix # Nvidia (Drivers and Settings)
-      ../../modules/nixos/gamming/steam.nix # For Steam/Proton/Lutris/MangoHUD/Heroic/Bottles
+      ../../modules/nixos/gaming/nvidia.nix # Nvidia (Drivers and Settings)
+      ../../modules/nixos/gaming/starCitizen.nix
+      ../../modules/nixos/gaming/steam.nix # For Steam/Proton/Lutris/MangoHUD/Heroic/Bottles
       ../../modules/common/spotify.nix # Spotify
       ../../modules/common/ai.nix
     ];
