@@ -30,6 +30,7 @@
       lutris
       heroic
       bottles
+      prism
     ];
   };
 }
