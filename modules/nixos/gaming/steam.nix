@@ -30,7 +30,7 @@
       lutris
       heroic
       bottles
-      prism
+      prismlauncher
     ];
   };
 }
