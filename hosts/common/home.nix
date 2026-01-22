@@ -67,7 +67,9 @@
 
     shellAliases = {
       drs = "sudo darwin-rebuild switch --flake ~/Developer/nix/NixOSDots#macOS";
-      nrs = "sudo nixos-rebuild switch --flake ~/Developer/nix/NixOSDots#";
+      nrs = "sudo nixos-rebuild switch --flake ~/Developer/nix/NixOSDots#nixos";
+      lrs = "sudo nixos-rebuild switch --flake ~/Developer/nix/NixOSDots#light";
+      cdd = "cd ~/Developer/nix/NixOSDots";
       ncg = "nix-collect-garbage -d";
       nfu = "nix flake update --flake ~/Developer/nix/NixOSDots";
     };
