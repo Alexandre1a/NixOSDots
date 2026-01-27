@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 let
   workspaceBinds = let
     wsList = builtins.genList (i: i + 1) 10;
