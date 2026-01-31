@@ -7,13 +7,16 @@
         dontBuild = true;
         dontConfigure = true;
 
+        nativeBuildInputs = [ pkgs.unzip ];
+
         src = pkgs.fetchzip {
           url = "https://github.com/Vencord/Vesktop/releases/download/v1.6.4/Vesktop-1.6.4-universal-mac.zip";
-          sha256 = "a78d0abcecfb1c615b7bd3ebe0428b4ae9f8a6f6ffa6dd288bb42f69a440dfa";
+          sha256 = "sha256-Z5k9KXMTEglWAM0aNc+ATRGywKs9O43XgahTPf0hpyk=";
         };
 
         installPhase = ''
           mkdir -p $out/Applications
+          unzip Vesktop-1.6.4-universal-mac.zip
           cp -R Vesktop.app $out/Applications/
         '';
 
