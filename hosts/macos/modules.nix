@@ -4,6 +4,7 @@
 # Enpty file for future imports
   imports = [
     ../../modules/common/nix.nix
+    ../../modules/macos/vesktop.nix
     #../../modules/macos/ollama.nix
     ../../modules/common/direnv.nix
   ];
