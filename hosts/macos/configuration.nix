@@ -14,7 +14,6 @@
     systemPackages = with pkgs;
       [
         git-lfs
-        darwin.cctools
         #telnet
       ];
     pathsToLink = [ "/share/zsh" ];
