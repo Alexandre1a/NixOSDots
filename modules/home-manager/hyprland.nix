@@ -44,6 +44,7 @@ in
       monitor = [
         "HDMI-A-1, 1920x1080@144, 1440x0, 1"
 	      "DP-1, 1440x900@59.89, 0x0, 1"
+        ", highres, auto, 1"
       ];
 
       # Assign workspaces to monitors
