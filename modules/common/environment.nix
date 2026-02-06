@@ -20,5 +20,8 @@
           cmatrix
           gh
     ];
+    variables = {
+      EDITOR = "nvim";
+    };
   };
 }
