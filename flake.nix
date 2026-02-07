@@ -48,7 +48,7 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/framework/configuration.nix
-        inputs.home-manager?nixosModules.default
+        inputs.home-manager.nixosModules.default
         inputs.sops-nix.nixosModules.sops
       ];
     };
