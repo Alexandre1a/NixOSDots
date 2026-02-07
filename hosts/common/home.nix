@@ -8,7 +8,7 @@ in
   imports = [
     inputs.spicetify-nix.homeManagerModules.spicetify
     modules.hm.spicetify
-    modules.zed.nix
+    modules.zed
     modules.hm.shell
   ];
 
