@@ -18,6 +18,7 @@
     shell = ./home-manager/shell.nix;
     spicetify = ./home-manager/spicetify.nix;
     zed = ./home-manager/zed.nix;
+    zen = ./home-manager/zen.nix;
   };
 
   nixos = {

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
     environment = {
         systemPackages = with pkgs; [
@@ -19,6 +19,8 @@
           gnupg
           cmatrix
           gh
+	  # Browser
+	  inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
     variables = {
       EDITOR = "nvim";

@@ -9,6 +9,7 @@ in
     inputs.spicetify-nix.homeManagerModules.spicetify
     modules.hm.spicetify
     modules.hm.zed
+    modules.hm.zen
     modules.hm.shell
   ];
 
