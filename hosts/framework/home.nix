@@ -6,7 +6,7 @@ in
 {
   imports = [
     ../common/home.nix
-    modules.hm.hyprland.nix
+    modules.hm.hyprland
   ];
 
   home = {

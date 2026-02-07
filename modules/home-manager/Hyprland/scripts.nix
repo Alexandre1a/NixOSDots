@@ -2,7 +2,7 @@
 
 pkgs.writeShellApplication {
   name = "VolumeManager";
-  runtinmeInputs = [
+  runtimeInputs = [
     pkgs.wireplumber
   ];
 

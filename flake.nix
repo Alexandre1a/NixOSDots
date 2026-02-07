@@ -4,7 +4,9 @@
   inputs = {
     # NixPKGS unstable
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+    
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    
     # Hyprland
     hyprland.url = "github:hyprwm/Hyprland";
 
@@ -47,6 +49,7 @@
     nixosConfigurations.framework = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
+      	inputs.nixos-hardware.nixosModules.framework-16-7040-amd
         ./hosts/framework/configuration.nix
         inputs.home-manager.nixosModules.default
         inputs.sops-nix.nixosModules.sops

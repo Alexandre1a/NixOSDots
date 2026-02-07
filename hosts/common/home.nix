@@ -1,12 +1,15 @@
 { config, pkgs, inputs, ... }:
 
+let 
+  modules = import ../../modules;
+in
 {
 
   imports = [
     inputs.spicetify-nix.homeManagerModules.spicetify
-    ../../modules/home-manager/spicetify.nix
+    modules.hm.spicetify
     #../../modules/home-manager/zed.nix
-    ../../modules/home-manager/shell.nix
+    modules.hm.shell
   ];
 
 

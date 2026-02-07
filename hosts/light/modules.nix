@@ -1,7 +1,12 @@
+{pkgs, ...}:
+
+let
+  modules = import ../../modules;
+in
 {
   imports = [
-    ./hardware-configuration.nix
-    ../common/modules.nix
-    ../../modules/nixos/xfce.nix # Desktop Enviroment 
+    #./hardware-configuration.nix
+    modules.common.module
+    modules.nixos.xfce # Desktop Enviroment 
   ];
 }
