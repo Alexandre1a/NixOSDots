@@ -1,11 +1,14 @@
 { config, pkgs, inputs, ... }:
 
+let 
+  modules = import ../../modules;
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   imports = [
     ../common/home.nix
-    ../../modules/home-manager/hyprland.nix
+    modules.hm.hyprland.nix
   ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

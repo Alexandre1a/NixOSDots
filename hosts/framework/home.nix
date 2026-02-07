@@ -1,9 +1,12 @@
 {config, pkgs, inputs, ...}:
 
+let
+  modules = import ../../modules;
+in 
 {
   imports = [
     ../common/home.nix
-    ../../modules/home-manager/hyprland.nix
+    modules.hm.hyprland.nix
   ];
 
   home = {
