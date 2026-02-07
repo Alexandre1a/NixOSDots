@@ -94,14 +94,17 @@ in
       bindl = [
         ", XF86AudioPause, exec, playerctl play-pause"
 	", XF86AudioPlay, exec, playerctl play-pause"
-	", XF86AudioRaiseVolume, exec, wpctl set-sink volume @DEFAULT_SINK@ +5%"
-	", XF86AudioLowerVolume, exec, wpctl set-sink volume @DEFAULT_SINK@ -5%"
+	", XF86AudioRaiseVolume, exec, VolumeManager up"
+	", XF86AudioLowerVolume, exec, VolumeManager down"
+	", XF866AudioMute, exec, VolumeManager mute"
       ];
 
     };
   }; 
 
   home.packages = with pkgs; [
+    # Custom scripts
+    (import ./scripts.nix { inherit pkgs; })
     # Hyprland related (rice, etc...)
     wofi
     alacritty
