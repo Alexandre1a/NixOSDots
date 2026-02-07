@@ -7,7 +7,7 @@
         xterm = {
           enable = true;
         };
-        xfce {
+        xfce = {
           enable = true;
         };
       };
