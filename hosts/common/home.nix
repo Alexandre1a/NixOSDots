@@ -8,7 +8,7 @@ in
   imports = [
     inputs.spicetify-nix.homeManagerModules.spicetify
     modules.hm.spicetify
-    #../../modules/home-manager/zed.nix
+    modules.zed.nix
     modules.hm.shell
   ];
 
@@ -44,8 +44,9 @@ in
 
       # GUI apps
       vscode
-      #vesktop
+      vesktop
       obsidian
+      beeper
       bitwarden-desktop
       kitty # Terminal emulator but needs a GUI
 
