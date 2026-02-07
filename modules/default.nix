@@ -21,10 +21,12 @@
   };
 
   nixos = {
+    gaming = {
+      nvidia = ./nixos/gaming/nvidia.nix;
+      starCitizen = ./nixos/gaming/starCitizen.nix;
+      steam = ./nixos/gaming/steam.nix;
+    };
     bootloader = ./nixos/bootloader.nix;
-    nvidia = ./nixos/gaming/nvidia.nix;
-    starCitizen = ./nixos/gaming/starCitizen.nix;
-    steam = ./nixos/gaming/steam.nix;
     locale = ./nixos/locale.nix;
     secrets = ./nixos/secrets.nix;
     swap = ./nixos/swap.nix;

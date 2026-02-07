@@ -1,9 +1,11 @@
 { config, pkgs, inputs, ... }:
-
+let
+  modules = import ../../modules;
+in
 {
   # Refer to the nixOS host for info about home-manager
   imports = [
-    ../common/home.nix
+    modules.common.home
   ];
 
   

@@ -1,9 +1,12 @@
+let
+  modules = import ../../modules;
+in
 {
   imports = [
-    ../common/modules.nix
+    modules.common.module
     ./hardware-configuration.nix
-    ../../modules/nixos/gaming/steam.nix
-    ../../modules/nixos/gaming/nvidia.nix
+    modules.nixos.gaming.steam
+    modules.nixos.gaming.nvidia
   ];
 
 }

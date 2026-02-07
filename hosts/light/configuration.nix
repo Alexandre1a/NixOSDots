@@ -20,17 +20,23 @@
       };
     };
 
-  # Home-Manager config
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    backupFileExtension = "HM-backup";
-    users = {
-      # Change this to your username
-      "light" = import ./home.nix;
+  programs = {
+    zsh = {
+      enable = true;
     };
   };
+
+  # Home-Manager config
+  #home-manager = {
+  #  extraSpecialArgs = { inherit inputs; };
+  #  useGlobalPkgs = true;
+  #  useUserPackages = true;
+  #  backupFileExtension = "HM-backup";
+  #  users = {
+  #    # Change this to your username
+  #    "light" = import ./home.nix;
+  #  };
+  #};
 
   environment = {
     systemPackages = with pkgs; [

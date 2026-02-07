@@ -5,7 +5,7 @@ let
 in
 {
   imports = [
-    #./hardware-configuration.nix
+    ./hardware-configuration.nix
     modules.common.module
     modules.nixos.xfce # Desktop Enviroment 
   ];

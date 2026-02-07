@@ -5,7 +5,7 @@ let
 in 
 {
   imports = [
-    ../common/home.nix
+    modules.common.home
     modules.hm.hyprland
   ];
 
