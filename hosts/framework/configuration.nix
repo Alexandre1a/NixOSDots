@@ -21,7 +21,7 @@
         isNormalUser = true;
         description = "Alexandre Delcamp--Enache";
         shell= pkgs.zsh;
-        extraGrousp = [ "networkmanager" "wheel" ];
+        extraGroups = [ "networkmanager" "wheel" ];
       };
     };
   };
