@@ -1,0 +1,28 @@
+# macOS system files
+# This ignores .DS_Store in the root and all subdirectories
+.DS_Store
+
+# direnv cache directories
+# This ignores .direnv folders in the root and all subdirectories
+.direnv/
+
+# Optional: Other common files you might want to ignore
+
+# Editor and IDE files
+# .vscode/
+# .idea/
+# *.swp
+# *.swo
+# *~
+
+# Build artifacts
+# build/
+# dist/
+# *.o
+# *.so
+# *.dylib
+
+# Nix build results (if you want to ignore result symlinks)
+# result
+# result-*
+
