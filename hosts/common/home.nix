@@ -10,6 +10,7 @@ in
     modules.hm.spicetify
     modules.hm.zed
     modules.hm.zen
+    modules.hm.nvim
     modules.hm.shell
   ];
 

@@ -19,6 +19,7 @@
     spicetify = ./home-manager/spicetify.nix;
     zed = ./home-manager/zed.nix;
     zen = ./home-manager/zen.nix;
+    nvim = ./home-manager/nvim.nix;
   };
 
   nixos = {
