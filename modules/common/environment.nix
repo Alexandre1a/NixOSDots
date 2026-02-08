@@ -6,7 +6,8 @@
           neovim
           vim
           # Sytem utilities
-          wget
+          ripgrep
+	  wget
           git
           tree
           btop
