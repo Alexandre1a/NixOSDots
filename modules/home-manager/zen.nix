@@ -30,7 +30,7 @@ let
 
 in
 {
-  environment.systemPackages = [
+  home.packages = [
     (pkgs.wrapFirefox
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.zen-browser-unwrapped
       {
@@ -66,10 +66,10 @@ in
                 Alias = "@nw";
               }
               {
-                Name = "noogle";
-                URLTemplate = "https://noogle.dev/q?term={searchTerms}";
-                IconURL = "https://noogle.dev/favicon.ico";
-                Alias = "@ng";
+                Name = "Brave Search";
+                URLTemplate = "https://search.brave.com/search?q={searchTerms}";
+                IconURL = "https://brave.com/favicon.ico";
+                Alias = "@brave";
               }
             ];
           };

@@ -21,7 +21,8 @@
           name = "python-ml";
 
           packages = with pkgs; [
-            python
+            python314
+	    python314.pkgs.pygame
             #python.pkgs.pip
             #python.pkgs.virtualenv
 
@@ -37,8 +38,7 @@
           ];
 
           shellHook = ''
-            echo "🐍 Python ML dev shell"
-            export PYTHONBREAKPOINT=ipdb.set_trace
+            echo "Python loaded"
           '';
         };
       });
