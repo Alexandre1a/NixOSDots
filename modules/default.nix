@@ -27,6 +27,7 @@
       nvidia = ./nixos/gaming/nvidia.nix;
       starCitizen = ./nixos/gaming/starCitizen.nix;
       steam = ./nixos/gaming/steam.nix;
+      vr = ./nixos/gaming/vr.nix;
     };
     bootloader = ./nixos/bootloader.nix;
     locale = ./nixos/locale.nix;

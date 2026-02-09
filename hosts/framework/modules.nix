@@ -10,6 +10,7 @@ in
     modules.nixos.secrets
     modules.nixos.gaming.starCitizen
     modules.nixos.gaming.steam
+    modules.nixos.gamong.vr
     modules.common.spotify
   ];
 }

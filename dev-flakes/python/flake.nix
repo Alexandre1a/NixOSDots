@@ -1,5 +1,5 @@
 {
-  description = "Python ML dev environment";
+  description = "General Python dev environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
