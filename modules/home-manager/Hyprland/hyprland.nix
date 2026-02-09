@@ -25,7 +25,7 @@ in
       "$launcher"   = "wofi --show drun";
       "$launcher2"  = "hyprlauncher";
       "fileManager" = "dolphin";
-      "$browser"    = "firefox";
+      "$browser"    = "zen";
       "$screenShot" = "hyprshot -m region";
 
       exec-once = [
@@ -59,6 +59,8 @@ in
 	"8, monitor:DP-1"
       	"9, monitor:DP-1"
       	"10, monitor:DP-1"
+
+	"1, default:true, persistent:true"
       ];
 
       # Keybinds
