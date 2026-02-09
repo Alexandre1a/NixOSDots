@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 let
   workspaceBinds = let
@@ -32,6 +32,7 @@ in
       exec-once = [
         "hyprlauncher"
 	"systemctl --user start hyprpolkitagent"
+	"awww-daemon"
       ];
 
       # Input
@@ -123,6 +124,7 @@ in
     alacritty
     firefox
     cava
+    inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
     # File manager
     kdePackages.dolphin
     kdePackages.gwenview

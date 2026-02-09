@@ -13,6 +13,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    awww = {
+      url = "git+https://codeberg.org/LGFae/awww";
+    };
+
     # Spicetify
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
