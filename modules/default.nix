@@ -25,6 +25,7 @@
   nixos = {
     gaming = {
       nvidia = ./nixos/gaming/nvidia.nix;
+      amd = ./nixos/gaming/amd.nix;
       starCitizen = ./nixos/gaming/starCitizen.nix;
       steam = ./nixos/gaming/steam.nix;
       vr = ./nixos/gaming/vr.nix;
