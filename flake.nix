@@ -15,6 +15,12 @@
 
     awww = {
       url = "git+https://codeberg.org/LGFae/awww";
+      input.nixpkgs.follows = "nixpkgs";
+    };
+
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Spicetify
@@ -32,12 +38,14 @@
     # Star citizen
     nix-citizen = {
      url = "github:LovingMelody/nix-citizen";
+     inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
