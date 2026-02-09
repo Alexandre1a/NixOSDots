@@ -27,6 +27,7 @@ in
       "fileManager" = "dolphin";
       "$browser"    = "zen";
       "$screenShot" = "hyprshot -m region";
+      # Todo : Add a notification daemon
 
       exec-once = [
         "hyprlauncher"
@@ -100,6 +101,16 @@ in
 	", XF86AudioMute, exec, VolumeManager mute"
       ];
 
+      # Layout config
+      general = {
+        layout = "dwindle";
+      };
+
+      dwindle = {
+        force_split = 0;
+	preserve_split = true;
+      };
+
     };
   }; 
 
@@ -117,7 +128,6 @@ in
     # Hypr* ecosystem
     hyprlauncher
     hyprshot
+    hyprpolkitagent
   ];
-
-
 }
