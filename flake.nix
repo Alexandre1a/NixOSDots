@@ -15,7 +15,7 @@
 
     awww = {
       url = "git+https://codeberg.org/LGFae/awww";
-      input.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     quickshell = {
