@@ -49,8 +49,8 @@ in
 
       # Assign workspaces to monitors
       workspace = [
-        "1, monitor:HDMI-A-1, default:true"
-	"2, monitor:HDMI-A-1"
+        "1, default:true, persistent:true"
+        "2, monitor:HDMI-A-1"
 	"3, monitor:HDMI-A-1"
       	"4, monitor:HDMI-A-1"
 	"5, monitor:HDMI-A-1"
@@ -60,7 +60,6 @@ in
       	"9, monitor:DP-1"
       	"10, monitor:DP-1"
 
-	"1, default:true, persistent:true"
       ];
 
       # Keybinds
