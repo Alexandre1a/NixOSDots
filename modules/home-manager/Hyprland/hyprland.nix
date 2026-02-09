@@ -97,7 +97,7 @@ in
 	", XF86AudioPlay, exec, playerctl play-pause"
 	", XF86AudioRaiseVolume, exec, VolumeManager up"
 	", XF86AudioLowerVolume, exec, VolumeManager down"
-	", XF866AudioMute, exec, VolumeManager mute"
+	", XF86AudioMute, exec, VolumeManager mute"
       ];
 
     };
