@@ -49,6 +49,10 @@
   environment = {
     systemPackages = with pkgs; [
       playerctl
+
+      # Video Accel
+      libva
+      libva-utils
     ];
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
