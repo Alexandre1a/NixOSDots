@@ -31,6 +31,7 @@ in
 
       exec-once = [
         "hyprlauncher"
+	"systemctl --user start hyprpolkitagent"
       ];
 
       # Input
