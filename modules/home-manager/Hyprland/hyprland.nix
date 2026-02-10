@@ -31,22 +31,22 @@ in
 
       exec-once = [
         "hyprlauncher"
-	"systemctl --user start hyprpolkitagent"
-	"awww-daemon"
+	      "systemctl --user start hyprpolkitagent"
+      	"awww-daemon"
       ];
 
       # Input
       input = {
         kb_layout = "fr";
-	  numlock_by_default = true;
-	  accel_profile = "flat";
-	  follow_mouse = "1";
+	      numlock_by_default = true;
+	      accel_profile = "flat";
+	      follow_mouse = "1";
       };
 
       # Monitor config
       monitor = [
         "HDMI-A-1, 1920x1080@144, 1440x0, 1"
-	"DP-1, 1440x900@59.89, 0x0, 1"
+	      "DP-1, 1440x900@59.89, 0x0, 1"
         ", highres, auto, 1"
       ];
 
@@ -54,12 +54,12 @@ in
       workspace = [
         "1, default:true, persistent:true"
         "2, monitor:HDMI-A-1"
-	"3, monitor:HDMI-A-1"
+	      "3, monitor:HDMI-A-1"
       	"4, monitor:HDMI-A-1"
-	"5, monitor:HDMI-A-1"
+	      "5, monitor:HDMI-A-1"
       	"6, monitor:DP-1"
       	"7, monitor:DP-1"
-	"8, monitor:DP-1"
+	      "8, monitor:DP-1"
       	"9, monitor:DP-1"
       	"10, monitor:DP-1"
 
@@ -69,10 +69,10 @@ in
       bind = workspaceBinds ++ [
         # Launch binds
         "$mod, Q, killactive"
-	"$mod, RETURN, exec, $term"
-	"$mod, M, exit"
-	"$mod, R, exec, $launcher2"
-	"$mod SHIFT, F, exec, $browser"
+	      "$mod, RETURN, exec, $term"
+	      "$mod, M, exit"
+	      "$mod, R, exec, $launcher2"
+	      "$mod SHIFT, F, exec, $browser"
         "$mod, E, exec, $fileManager"
         "$mod, F, fullscreen"
         "$mod, PRINT, exec, $screenShot"
@@ -92,15 +92,16 @@ in
       # Mouse binds
       bindm = [
         "$mod, mouse:272, movewindow"
-	"$mod, mouse: 273, resizewindow"
+	      "$mod, mouse: 273, resizewindow"
       ];
 
       bindl = [
         ", XF86AudioPause, exec, playerctl play-pause"
-	", XF86AudioPlay, exec, playerctl play-pause"
-	", XF86AudioRaiseVolume, exec, VolumeManager up"
-	", XF86AudioLowerVolume, exec, VolumeManager down"
-	", XF86AudioMute, exec, VolumeManager mute"
+	      ", XF86AudioPlay, exec, playerctl play-pause"
+        # Audio
+      	", XF86AudioRaiseVolume, exec, VolumeManager up"
+	      ", XF86AudioLowerVolume, exec, VolumeManager down"
+      	", XF86AudioMute, exec, VolumeManager mute"
       ];
 
       # Layout config
@@ -110,9 +111,8 @@ in
 
       dwindle = {
         force_split = 0;
-	preserve_split = true;
+      	preserve_split = true;
       };
-
     };
   }; 
 
