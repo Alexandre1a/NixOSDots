@@ -125,6 +125,7 @@ in
     firefox
     cava
     inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
+    quickshell
     # File manager
     kdePackages.dolphin
     kdePackages.gwenview

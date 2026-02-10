@@ -14,15 +14,15 @@
           config.allowUnfree = true;
         };
 
-        python = pkgs.python311;
+        python = pkgs.python314;
       in
       {
         devShells.default = pkgs.mkShell {
-          name = "python-ml";
+          name = "python";
 
           packages = with pkgs; [
-            python314
-	    python314.pkgs.pygame
+            python
+	    python.pkgs.pygame
             #python.pkgs.pip
             #python.pkgs.virtualenv
 
