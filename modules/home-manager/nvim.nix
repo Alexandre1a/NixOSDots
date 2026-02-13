@@ -132,6 +132,10 @@
             nixd = {
               enable = true;
             };
+
+            cmake-language-server = {
+              enable = true;
+            };
             
             # C++ language server
             clangd = {

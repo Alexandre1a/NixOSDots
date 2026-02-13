@@ -21,16 +21,27 @@
           name = "vulkan";
 
           packages = with pkgs; [
-            shaderc
+            # Shader compile
+            shader-slang
+            glslang
+            # Vulkan
             vulkan-headers
             vulkan-loader
             vulkan-validation-layers
             vulkan-tools
-            glfw
+            vulkan-utility-libraries
+            # Other libraries
+            glfw3
+            tinyobjloader
+            glm
             cmake
+            ninja
           ];
-          VK_LAYER_PATH = "${pkgs.vulkan-loader}/lib:${pkgs.shaderc.lib}/lib"
-         
+          # Environment Variables
+          LD_LIBRARY_PATH = "${pkgs.vulkan-loader}/lib:${pkgs.shaderc.lib}/lib";
+          VK_LAYER_PATH = "${pkgs.vulkan-validation-layers}/share/vulkan/explicit_layer.d";
+          VULKAN_SDK = "${pkgs.vulkan-validation-layers}/share/vulkan/explicit_layer.d";
+
           shellHook = ''
             echo "Vulkan loaded"
           '';
