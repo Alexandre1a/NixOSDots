@@ -7,13 +7,13 @@
           vim
           # Sytem utilities
           ripgrep
-	  wget
+	        wget
           git
           tree
           btop
           eza
           fastfetch
-          ffmpeg
+          ffmpeg-full
           fzf
           netcat
           tmux
