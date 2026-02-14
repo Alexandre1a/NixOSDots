@@ -12,6 +12,13 @@
     };
   };
 
+  # Flatpak
+  services = {
+    flatpak = {
+      enable = true;
+    };
+  };
+
   # Todo -> Display server for all nixos machines (lightdm or smth else)
   
   # User

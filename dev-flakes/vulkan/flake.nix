@@ -19,6 +19,7 @@
       {
         devShells.default = pkgs.mkShell {
           name = "vulkan";
+          hardeningDisable = [ "fortify" ];
 
           packages = with pkgs; [
             # Shader compile
