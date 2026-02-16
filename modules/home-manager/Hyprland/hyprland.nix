@@ -26,7 +26,7 @@ in
       "$launcher2"  = "hyprlauncher";
       "fileManager" = "dolphin";
       "$browser"    = "zen";
-      "$screenShot" = "hyprshot -m region";
+      "$screenShot" = "hyprshot -m region -o ~/Pictures/Screenshots";
       # Todo : Add a notification daemon
 
       exec-once = [
@@ -41,6 +41,9 @@ in
 	      numlock_by_default = true;
 	      accel_profile = "flat";
 	      follow_mouse = "1";
+        touchpad = {
+          disable_while_typing = false;
+        };
       };
 
       # Monitor config

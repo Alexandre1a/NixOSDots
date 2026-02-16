@@ -50,6 +50,7 @@ in
       obsidian
       beeper
       bitwarden-desktop
+      jellyfin-desktop
       kitty # Terminal emulator but needs a GUI
 
       # Go
@@ -63,7 +64,6 @@ in
 
       # C/C++
       clang-tools # The main compiler
-      cmake
       vcpkg # The package manager
 
       # Python

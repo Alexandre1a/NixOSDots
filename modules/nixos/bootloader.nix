@@ -15,5 +15,6 @@
        "fs.file-max" = 524288;
       };
     };
-  };
+  }; #End of "boot"
+# EOF
 }

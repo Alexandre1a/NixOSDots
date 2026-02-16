@@ -11,7 +11,7 @@ in
     modules.nixos.gaming.amd
     modules.nixos.gaming.starCitizen
     modules.nixos.gaming.steam
-    #modules.nixos.gaming.vr
+    modules.nixos.gaming.vr
     modules.common.spotify
   ];
 }
