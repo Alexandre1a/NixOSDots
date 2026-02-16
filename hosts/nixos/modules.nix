@@ -15,6 +15,6 @@ in
       modules.nixos.gaming.starCitizen
       modules.nixos.gaming.steam # For Steam/Proton/Lutris/MangoHUD/Heroic/Bottles
       modules.common.spotify # Spotify
-      modules.common.ai
+      #modules.common.ai # No AI slop on my computer anymore
     ];
 }
