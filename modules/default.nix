@@ -1,5 +1,7 @@
 {
   common = {
+    module = ../hosts/common/modules.nix;
+    home = ../hosts/common/home.nix;
     ai = ./common/ai.nix;
     direnv = ./common/direnv.nix;
     environment = ./common/environment.nix;
