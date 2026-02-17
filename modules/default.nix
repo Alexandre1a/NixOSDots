@@ -1,7 +1,5 @@
 {
   common = {
-    home = ../hosts/common/home.nix;
-    module = ../hosts/common/modules.nix;
     ai = ./common/ai.nix;
     direnv = ./common/direnv.nix;
     environment = ./common/environment.nix;
@@ -15,27 +13,31 @@
   hm = {
     hyprland = ./home-manager/Hyprland/hyprland.nix;
     scripts = ./home-manager/Hyprland/scripts.nix;
+    nvim = ./home-manager/nvim.nix;
     shell = ./home-manager/shell.nix;
     spicetify = ./home-manager/spicetify.nix;
     zed = ./home-manager/zed.nix;
     zen = ./home-manager/zen.nix;
-    nvim = ./home-manager/nvim.nix;
   };
 
   nixos = {
+    desktop = {
+      lightDM = ./nixos/desktop/lightDM.nix;
+      xfce = ./nixos/desktop/xfce.nix;
+    };
     gaming = {
-      nvidia = ./nixos/gaming/nvidia.nix;
       amd = ./nixos/gaming/amd.nix;
+      nvidia = ./nixos/gaming/nvidia.nix;
       starCitizen = ./nixos/gaming/starCitizen.nix;
       steam = ./nixos/gaming/steam.nix;
       vr = ./nixos/gaming/vr.nix;
     };
+
     bootloader = ./nixos/bootloader.nix;
     locale = ./nixos/locale.nix;
     secrets = ./nixos/secrets.nix;
     swap = ./nixos/swap.nix;
     wireless = ./nixos/wireless.nix;
-    xfce = ./nixos/xfce.nix;
   };
 
   macos = {

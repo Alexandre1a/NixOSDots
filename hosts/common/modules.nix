@@ -11,5 +11,6 @@ in
       modules.common.ssh
       modules.nixos.bootloader
       modules.common.environment
+      modules.nixos.desktop.lightDM
     ];
 }
