@@ -7,6 +7,7 @@
           vim
           # Sytem utilities
           ripgrep
+          sshfs
 	        wget
           git
           tree
