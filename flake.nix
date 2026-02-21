@@ -37,7 +37,7 @@
     
     # Star citizen
     nix-citizen = {
-     url = "github:LovingMelody/nix-citizen";
+     url = "github:Alexandre1a/nix-citizen";
      inputs.nixpkgs.follows = "nixpkgs";
     };
 
