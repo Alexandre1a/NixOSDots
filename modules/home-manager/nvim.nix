@@ -20,7 +20,7 @@
       opts = {
         # Line numbers
         number = true;           # Show absolute line numbers
-        relativenumber = true;   # Show relative line numbers (great for vim motions)
+        #relativenumber = true;   # Show relative line numbers (great for vim motions)
         
         # Indentation
         tabstop = 2;            # Number of spaces a tab counts for
