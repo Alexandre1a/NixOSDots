@@ -66,19 +66,19 @@
           enable = true;
         };
 
-	web-devicons = {
-	  enable = true;
-	};
+	      web-devicons = {
+	        enable = true;
+	      };
         
         # File tree
         neo-tree = {
           enable = true;
           settings = {
-	    close_if_last_window = true;
+	          close_if_last_window = true;
             window = {
               width = 30;
             };
-	  };
+	        };
         };
         
         # Fuzzy finder
