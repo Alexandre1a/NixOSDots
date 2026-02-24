@@ -33,6 +33,7 @@
       starCitizen = ./nixos/gaming/starCitizen.nix;
       steam = ./nixos/gaming/steam.nix;
       vr = ./nixos/gaming/vr.nix;
+      mod = ./nixos/gaming/mod.nix;
     };
 
     bootloader = ./nixos/bootloader.nix;
