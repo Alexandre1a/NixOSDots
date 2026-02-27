@@ -1,5 +1,5 @@
 {
-  description = "General C++ dev enviroment";
+  description = "Web dev + Go";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -15,34 +15,26 @@
         };
       in
       {
-        packages.default = pkgs.stdenv.mkDerivation {
-        pname = "myapp";
-        version = "0.1.0";
-        src = self;
-  
-        nativeBuildInputs = with pkgs; [ cmake ninja ];
-        buildInputs = with pkgs; [ ];
-        };
-
-	devShells.default = pkgs.mkShell {
-          name = "cpp-dev";
-          
-          # In the dev shell, you get more tools than just what's needed to build
+        devShells.default = pkgs.mkShell {
+         # In the dev shell, you get more tools than just what's needed to build
           packages = with pkgs; [
+            go
+            gopls
+            gotools
+            air
+            sqlite
+            sqlitebrowser
             gcc
-            clang
-            cmake
-            ninja
-            gdb
-            valgrind
-            clang-tools
-            ccache
           ];
+
+          # Variables
+          CGO_ENABLED = "1";
           
           shellHook = ''
-            echo "C++ loaded"
-            export CC="ccache gcc"
-            export CXX="ccache g++"
+            echo "Go loaded"
+            echo "air            -> Hot reload" 
+            echo "sqlite3 app.db -> Inspect the DataBase"
+            export PORT="8080"
           '';
         };
       });

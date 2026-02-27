@@ -5,7 +5,9 @@
       startAgent = true;
       extraConfig = ''
         Host github.com
-        IdentityFile ~/.ssh/github
+        IdentityFile ~/.ssh/git
+        Host git.alexdelcamp.fr
+        IdentityFile ~/.ssh/git
       '';
     };
   };
