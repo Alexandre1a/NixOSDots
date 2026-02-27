@@ -143,6 +143,19 @@
               # You can add custom settings here
               # cmd = ["clangd" "--background-index"];
             };
+  
+            # Web Dev
+            html = {
+              enable = true;
+            };
+
+            cssl = {
+              enable = true;
+            };
+
+            tsserver = {
+              enable = true;
+            };
             
             # Optional: other language servers you might want
             # bashls.enable = true;     # Bash
