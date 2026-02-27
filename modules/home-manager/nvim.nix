@@ -147,7 +147,9 @@
             # Optional: other language servers you might want
             # bashls.enable = true;     # Bash
             # pyright.enable = true;    # Python
-            # gopls.enable = true;      # Go
+            gopls = {
+              enable = true;      # Go
+            };
             # rust-analyzer.enable = true; # Rust
           };
           
