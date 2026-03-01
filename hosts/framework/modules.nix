@@ -6,6 +6,7 @@ in
   imports = [
     ./hardware-configuration.nix
     inputs.sops-nix.nixosModules.sops
+    modules.nixos.secureboot
     modules.common.module
     modules.nixos.secrets
     modules.nixos.gaming.amd

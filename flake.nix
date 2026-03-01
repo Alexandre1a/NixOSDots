@@ -6,6 +6,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     
     # Hyprland
     hyprland = {

@@ -37,6 +37,7 @@
     };
 
     bootloader = ./nixos/bootloader.nix;
+    secureboot = ./nixos/secureboot.nix;
     locale = ./nixos/locale.nix;
     secrets = ./nixos/secrets.nix;
     swap = ./nixos/swap.nix;
