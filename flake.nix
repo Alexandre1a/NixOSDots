@@ -83,6 +83,7 @@
       specialArgs = { inherit inputs; };
       modules = [
       	inputs.nixos-hardware.nixosModules.framework-16-7040-amd
+        inputs.lanzaboote.nixosModules.lanzaboote
         ./hosts/framework/configuration.nix
         inputs.home-manager.nixosModules.default
         inputs.sops-nix.nixosModules.sops

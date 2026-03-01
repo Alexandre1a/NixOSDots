@@ -21,7 +21,7 @@
           gnupg
           cmatrix
           gh
-          sbctl
+
 	  # Browser
 	  inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
