@@ -2,8 +2,14 @@
   boot = {
     loader = {
       systemd-boot = {
-          enable = true;
-          configurationLimit = 2;
+        enable = true;
+        configurationLimit = 2;
+        extraEntries = {
+          "winslop.conf" = ''
+            title Winslop 
+            efi /EFI/Microsoft/Boot/bootmgfw.efi
+          '';
+        };  
       };
       efi = {
           canTouchEfiVariables = true;
