@@ -153,7 +153,7 @@
               enable = true;
             };
 
-            tsserver = {
+            ts-ls = {
               enable = true;
             };
             
