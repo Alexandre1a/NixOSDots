@@ -29,7 +29,7 @@
     userSettings = {
       theme = {
         mode = "system";
-        dark = "Catpuccin Frappé (Blur)";
+        dark = "Catppuccin Frappé (Blur)";
         light = "Rosé Pine Dawn";
       };
       hour_format = "hour24";
