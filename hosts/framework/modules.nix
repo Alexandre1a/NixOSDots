@@ -9,6 +9,7 @@ in
     modules.nixos.secureboot
     modules.common.module
     modules.nixos.secrets
+    modules.nixos.desktop.bluetooth
     modules.nixos.gaming.amd
     modules.nixos.gaming.starCitizen
     modules.nixos.gaming.steam
