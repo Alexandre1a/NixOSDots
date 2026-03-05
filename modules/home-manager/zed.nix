@@ -8,7 +8,7 @@
       "rust"
 
       "rosé pine"
-      "cattpuccin blur"
+      "catpuccin blur"
       
       "typescript"
       "javascript"
@@ -29,7 +29,7 @@
     userSettings = {
       theme = {
         mode = "system";
-        dark = "Cattpuccin Frappé (Blur)";
+        dark = "Catpuccin Frappé (Blur)";
         light = "Rosé Pine Dawn";
       };
       hour_format = "hour24";
