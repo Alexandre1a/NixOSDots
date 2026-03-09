@@ -19,30 +19,6 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
 
-  # Enables SDDM
-  services = {
-    xserver = {
-      enable = true;
-    };
-
-    displayManager = {
-      defaultSession = "hyprland";
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-        #enableHidpi = true;
-        package = pkgs.kdePackages.sddm;
-        theme = "sddm-astronaut-theme";
-        #settings.Theme.CursorTheme = "Bibata-Modern-Classic";
-        extraPackages = with pkgs; [
-          kdePackages.qtmultimedia
-          kdePackages.qtsvg
-          kdePackages.qtvirtualkeyboard
-        ];
-      };
-    };
-  };
-
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";

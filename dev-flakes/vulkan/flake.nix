@@ -31,15 +31,24 @@
             vulkan-validation-layers
             vulkan-tools
             vulkan-utility-libraries
+            # Wayland
+            wayland
+            wayland-protocols
+            wayland-scanner
+            libxkbcommon
+            # Miniaudio
+            libpulseaudio
+            libpulseaudio.dev
             # Other libraries
             glfw3
             tinyobjloader
             glm
             cmake
             ninja
+            pkg-config
           ];
           # Environment Variables
-          LD_LIBRARY_PATH = "${pkgs.vulkan-loader}/lib:${pkgs.shaderc.lib}/lib";
+          LD_LIBRARY_PATH = "${pkgs.vulkan-loader}/lib:${pkgs.shaderc.lib}/lib:${pkgs.libpulseaudio}/lib:{$pkgs.libpulseaudio.dev}/lib";
           VK_LAYER_PATH = "${pkgs.vulkan-validation-layers}/share/vulkan/explicit_layer.d";
           VULKAN_SDK = "${pkgs.vulkan-validation-layers}/share/vulkan/explicit_layer.d";
 
