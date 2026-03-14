@@ -27,6 +27,9 @@
     systemPackages = with pkgs; [
       mangohud
       protonup-ng
+      protonup-qt
+      protontricks
+      protonplus
       lutris
       heroic
       bottles
