@@ -27,6 +27,7 @@
       lightDM = ./nixos/desktop/lightDM.nix;
       xfce = ./nixos/desktop/xfce.nix;
       bluetooth = ./nixos/desktop/bluetooth.nix;
+      utils     = ./nixos/desktop/utils.nix;
     };
     gaming = {
       amd = ./nixos/gaming/amd.nix;
