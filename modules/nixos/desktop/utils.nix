@@ -5,5 +5,7 @@
     kdePackages.gwenview
     kdePackages.ark
     vlc
+    unzip
+    unrar
   ];
 }
