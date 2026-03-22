@@ -11,7 +11,11 @@
       url = "github:nix-community/lanzaboote/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
+    # Custom Kernel
+    nix-cachyos-kernel = {
+      url = "github:xddxdd/nix-cachyos-kernel/release";
+    };
     # Hyprland
     hyprland = {
       url = "github:hyprwm/Hyprland";

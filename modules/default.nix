@@ -36,6 +36,7 @@
       steam = ./nixos/gaming/steam.nix;
       vr = ./nixos/gaming/vr.nix;
       mod = ./nixos/gaming/mod.nix;
+      kernel = ./nixos/gaming/kernel.nix
     };
 
     bootloader = ./nixos/bootloader.nix;
