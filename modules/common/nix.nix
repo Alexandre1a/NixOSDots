@@ -10,11 +10,11 @@
         experimental-features = [ "nix-command" "flakes" ];
 
         # Limit resource usage to prevent Linux OOM
-        max-jobs = 2;
-        cores = 4;
+        max-jobs = 4;
+        cores = 5;
 
         max-silent-time = 3600;
-        timeout = 1800;
+        timeout = 2700;
 
         # Package caches
         substituters = [
