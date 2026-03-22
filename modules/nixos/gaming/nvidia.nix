@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   hardware = { 
@@ -52,6 +52,7 @@
       # Native Wayland Electron Apps
       NIXOS_OZONE_WL = "1";
     };
+    systemPackages = [ pkgs.btop-cuda ];
   };
 
   # Nvidia Drivers

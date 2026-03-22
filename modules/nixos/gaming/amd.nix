@@ -5,4 +5,7 @@
     enable = true;
     enable32Bit = true;
   };
+  environment = {
+    systemPackages = [ pkgs.btop-rocm ];
+  };
 }
