@@ -11,7 +11,7 @@ in
     modules.nixos.secrets
     modules.nixos.desktop.bluetooth
     modules.nixos.desktop.utils
-    modules.nixos.gaming.kernel
+    #modules.nixos.gaming.kernel
     modules.nixos.gaming.amd
     modules.nixos.gaming.starCitizen
     modules.nixos.gaming.steam

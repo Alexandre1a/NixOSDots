@@ -1,9 +1,9 @@
 { pkgs, ...}:
 
 {
-  services.xserver = {
+  services = { 
+    xserver = {
       displayManager = {
-        defaultSession = "hyprland";
         lightdm = {
           enable = true;
           greeters = {
@@ -14,6 +14,10 @@
         };
       };
     enable = true;
+    };
+    displayManager = {
+      defaultSession = "hyprland";
+    };
   };
   # EOF
 }
