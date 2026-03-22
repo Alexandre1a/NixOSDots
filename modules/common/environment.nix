@@ -11,7 +11,7 @@
 	        wget
           git
           tree
-          btop
+          #btop
           eza
           fastfetch
           ffmpeg-full
