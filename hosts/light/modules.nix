@@ -7,6 +7,6 @@ in
   imports = [
     ./hardware-configuration.nix
     modules.common.module
-    modules.nixos.xfce # Desktop Enviroment 
+    modules.nixos.desktop.xfce # Desktop Enviroment 
   ];
 }
