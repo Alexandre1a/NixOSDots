@@ -74,7 +74,7 @@
 
       # Video Accel
       libva
-      libva-mesa-driver
+      libva-utils
       mesa
       (wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [
