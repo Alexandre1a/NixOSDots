@@ -7,5 +7,6 @@
     vlc
     unzip
     unrar
+    obs-studio
   ];
 }
