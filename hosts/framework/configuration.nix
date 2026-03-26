@@ -74,7 +74,6 @@
 
       # Video Accel
       libva
-      libva-utils
       libva-mesa-driver
       mesa
       (wrapOBS {
@@ -86,6 +85,7 @@
     ];
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
+      LIBVA_DRIVER_NAME = "radeonsi";
     };
     pathsToLink = [ "/share/zsh" ];
   };
