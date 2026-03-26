@@ -75,6 +75,14 @@
       # Video Accel
       libva
       libva-utils
+      libva-mesa-driver
+      mesa
+      (wrapOBS {
+        plugins = with pkgs.obs-studio-plugins; [
+          obs-vaapi        # ← encodage H.264/HEVC via VA-API (AMD, Intel)
+          obs-gstreamer    # ← optionnel mais utile
+        ];
+      })
     ];
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
