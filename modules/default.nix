@@ -37,6 +37,7 @@
       vr = ./nixos/gaming/vr.nix;
       mod = ./nixos/gaming/mod.nix;
       kernel = ./nixos/gaming/kernel.nix;
+      gstreamer = ./nixos/gaming/gstreamer.nix;
     };
 
     bootloader = ./nixos/bootloader.nix;
