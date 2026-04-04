@@ -14,7 +14,7 @@
         cores = 5;
 
         max-silent-time = 3600;
-        timeout = 2700;
+        timeout = 0;
 
         # Package caches
         substituters = [
