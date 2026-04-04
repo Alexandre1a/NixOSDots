@@ -27,12 +27,14 @@ in
       "fileManager" = "dolphin";
       "$browser"    = "zen";
       "$screenShot" = "hyprshot -m region -o ~/Pictures/Screenshots";
+      "$sync"       = "syncthing --no-browser";
       # Todo : Add a notification daemon
 
       exec-once = [
         "hyprlauncher"
 	      "systemctl --user start hyprpolkitagent"
       	"awww-daemon"
+        "$sync"
       ];
 
       # Input
