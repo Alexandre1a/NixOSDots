@@ -13,10 +13,7 @@
           inherit system;
           config.allowUnfree = true;
         };
-
-        python = pkgs.python314;
-      in
-      {
+      in {
         devShells.default = pkgs.mkShell {
           name = "vulkan";
           hardeningDisable = [ "fortify" ];
@@ -42,13 +39,18 @@
             # Other libraries
             glfw3
             tinyobjloader
+            nlohmann_json
+            tinygltf
+            stb
             glm
             cmake
             ninja
             pkg-config
+            # Debug
+            gdb
           ];
           # Environment Variables
-          LD_LIBRARY_PATH = "${pkgs.vulkan-loader}/lib:${pkgs.shaderc.lib}/lib:${pkgs.libpulseaudio}/lib:{$pkgs.libpulseaudio.dev}/lib";
+          LD_LIBRARY_PATH = "${pkgs.vulkan-loader}/lib:${pkgs.shaderc.lib}/lib:${pkgs.libpulseaudio}/lib:${pkgs.libpulseaudio.dev}/lib";
           VK_LAYER_PATH = "${pkgs.vulkan-validation-layers}/share/vulkan/explicit_layer.d";
           VULKAN_SDK = "${pkgs.vulkan-validation-layers}/share/vulkan/explicit_layer.d";
 
